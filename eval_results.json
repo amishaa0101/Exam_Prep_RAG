@@ -1,0 +1,2544 @@
+{
+  "timestamp": "2026-10-25T16:19:22",
+  "config": {
+    "mode": "rerank",
+    "k": 5,
+    "num_cases": 25,
+    "llm": "gemini/gemini-flash-lite-latest"
+  },
+  "retrieval": {
+    "per_case": [
+      {
+        "id": "dbms_bcnf",
+        "question": "What is BCNF and how is it different from 3NF?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 0.75,
+        "keywords_found": [
+          "bcnf",
+          "3nf",
+          "functional dependency"
+        ],
+        "keywords_missing": [
+          "super key"
+        ],
+        "top_scores": [
+          0.981,
+          0.9737,
+          0.9451,
+          0.8814,
+          0.7999
+        ],
+        "top_sections": [
+          "R(ABCDEFGHIJ)",
+          "Every X Y must satisfy the following condition :",
+          "CASE 2 :",
+          "Every X Y must satisfy the following condition :",
+          "Every X Y must satisfy the following condition :"
+        ]
+      },
+      {
+        "id": "dbms_closure",
+        "question": "How do you find the closure of an attribute set and use it to find candidate keys?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 0.6,
+        "keyword_recall": 0.75,
+        "keywords_found": [
+          "closure",
+          "candidate key",
+          "attribute"
+        ],
+        "keywords_missing": [
+          "functional dependency"
+        ],
+        "top_scores": [
+          0.9989,
+          0.9973,
+          0.9948,
+          0.9935,
+          0.988
+        ],
+        "top_sections": [
+          "Finding Multiple Candidate key :",
+          "ER model :",
+          "Solution : R(ABCD)  candidate key = [A] Method 2 :",
+          "Every X Y must satisfy the following condition :",
+          "Solution : R(ABCD)  candidate key = [A] Method 2 :"
+        ]
+      },
+      {
+        "id": "dbms_lossless",
+        "question": "What is a lossless join decomposition and how do you check it?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 0.75,
+        "keywords_found": [
+          "lossless",
+          "decomposition",
+          "common attribute"
+        ],
+        "keywords_missing": [
+          "dependency preserv"
+        ],
+        "top_scores": [
+          0.9901,
+          0.9652,
+          0.9558,
+          0.9264,
+          0.8289
+        ],
+        "top_sections": [
+          "Method 2 :",
+          "Method 2 :",
+          "Method 2 :",
+          "Method 2 :",
+          "Method 2 :"
+        ]
+      },
+      {
+        "id": "dbms_candidate_key",
+        "question": "What is the difference between a super key, candidate key and primary key?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 0.75,
+        "keywords_found": [
+          "candidate key",
+          "primary key",
+          "minimal"
+        ],
+        "keywords_missing": [
+          "super key"
+        ],
+        "top_scores": [
+          0.9994,
+          0.996,
+          0.9924,
+          0.9898,
+          0.9882
+        ],
+        "top_sections": [
+          "ABCDG",
+          "ABCDG",
+          "ABCDG",
+          "CASE 2 :",
+          "ABCDG"
+        ]
+      },
+      {
+        "id": "dbms_foreign_key",
+        "question": "Explain foreign keys and referential integrity.",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "foreign key",
+          "primary key",
+          "referential",
+          "delete"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9967,
+          0.9949,
+          0.9934,
+          0.9911,
+          0.9901
+        ],
+        "top_sections": [
+          "Representation :",
+          "Important point about the foreign key :",
+          "Important point about the foreign key :",
+          "Important point about the foreign key :",
+          "Representation :"
+        ]
+      },
+      {
+        "id": "dbms_weak_entity",
+        "question": "What is a weak entity set in the ER model?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 0.8,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "weak entity",
+          "identifying",
+          "participation",
+          "key"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9967,
+          0.9958,
+          0.9846,
+          0.97,
+          0.9407
+        ],
+        "top_sections": [
+          "Representation :",
+          "Representation :",
+          "RDBMS",
+          "Representation :",
+          "1.1. Entity set : Collection / group of similar entities"
+        ]
+      },
+      {
+        "id": "dbms_exists",
+        "question": "How does the EXISTS clause work in SQL nested queries?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 0.2,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "exists",
+          "select",
+          "where",
+          "true"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9081,
+          0.6592,
+          0.244,
+          0.2014,
+          0.0346
+        ],
+        "top_sections": [
+          "R minus all (except all) S :",
+          "SQL clauses :",
+          "SQL clauses :",
+          "R minus all (except all) S :",
+          "R minus all (except all) S :"
+        ]
+      },
+      {
+        "id": "dbms_trc",
+        "question": "What is tuple relational calculus?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 0.2,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "trc",
+          "tuple",
+          "exists",
+          "relational algebra"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9988,
+          0.8964,
+          0.3595,
+          0.1331,
+          0.0743
+        ],
+        "top_sections": [
+          "WHERE EXISTS (SELECT*",
+          "Questions :",
+          "WHERE EXISTS (SELECT*",
+          "COLUMN",
+          "Introduction"
+        ]
+      },
+      {
+        "id": "dbms_acid",
+        "question": "What are the ACID properties of a transaction?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 0.8,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "atomicity",
+          "consistency",
+          "isolation",
+          "durability"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.8342,
+          0.0001,
+          0.0001,
+          0.0,
+          0.0
+        ],
+        "top_sections": [
+          "BCNF Decomposition:",
+          "Reasons of transaction failure :",
+          "BCNF Decomposition:",
+          "Reasons of transaction failure :",
+          "Questions :"
+        ]
+      },
+      {
+        "id": "dbms_conflict_serializability",
+        "question": "What is conflict serializability and how do you test a schedule for it?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "conflict",
+          "precedence graph",
+          "cycle",
+          "schedule"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.995,
+          0.9942,
+          0.9937,
+          0.9929,
+          0.9924
+        ],
+        "top_sections": [
+          "CYCLE NOT CONFLICT",
+          "Process :",
+          "Operations :",
+          "SCHEDULE",
+          "SCHEDULE"
+        ]
+      },
+      {
+        "id": "dbms_recoverable",
+        "question": "What is the difference between recoverable and cascadeless schedules?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "recoverable",
+          "cascad",
+          "commit",
+          "read"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9991,
+          0.9985,
+          0.9972,
+          0.9965,
+          0.9848
+        ],
+        "top_sections": [
+          "CASCADELESS",
+          "CASCADELESS",
+          "RW (read-write) problem / un(non)-repeatable read problem :",
+          "RW (read-write) problem / un(non)-repeatable read problem :",
+          "RW (read-write) problem / un(non)-repeatable read problem :"
+        ]
+      },
+      {
+        "id": "dbms_2pl",
+        "question": "How does the two-phase locking protocol work?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 0.6,
+        "keyword_recall": 0.75,
+        "keywords_found": [
+          "growing",
+          "shrinking",
+          "lock"
+        ],
+        "keywords_missing": [
+          "deadlock"
+        ],
+        "top_scores": [
+          0.997,
+          0.9938,
+          0.128,
+          0.1172,
+          0.1058
+        ],
+        "top_sections": [
+          "NOT GRANTED",
+          "Lock compatible matrix :",
+          "SCHEDULE",
+          "Lock compatible matrix :",
+          "Lock compatible matrix :"
+        ]
+      },
+      {
+        "id": "dbms_timestamp",
+        "question": "Explain the timestamp ordering protocol and Thomas write rule.",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "timestamp",
+          "rts",
+          "wts",
+          "thomas"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9981,
+          0.579,
+          0.1675,
+          0.1356,
+          0.1141
+        ],
+        "top_sections": [
+          "CONSERVATIVE",
+          "CONSERVATIVE",
+          "CONSERVATIVE",
+          "CONSERVATIVE",
+          "CONSERVATIVE"
+        ]
+      },
+      {
+        "id": "dbms_bplus_tree",
+        "question": "What is a B+ tree and how is it different from a B tree?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "b+ tree",
+          "leaf",
+          "order",
+          "key"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.998,
+          0.987,
+          0.9497,
+          0.9369,
+          0.9239
+        ],
+        "top_sections": [
+          "B+ tree internal node split :",
+          "ORDER : P",
+          "ORDER : P",
+          "ORDER : P",
+          "ORDER : P"
+        ]
+      },
+      {
+        "id": "dbms_dense_sparse",
+        "question": "What is the difference between a dense index and a sparse index?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "dense",
+          "sparse",
+          "index",
+          "record"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9266,
+          0.7916,
+          0.5156,
+          0.481,
+          0.1135
+        ],
+        "top_sections": [
+          "TRC :",
+          "chapter 1 se hi hoga.",
+          "TRC :",
+          "chapter 1 se hi hoga.",
+          "chapter 1 se hi hoga."
+        ]
+      },
+      {
+        "id": "dbms_blocking_factor",
+        "question": "What is the blocking factor and how do you compute the number of blocks needed for a file?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "block",
+          "record",
+          "factor",
+          "size"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9968,
+          0.9953,
+          0.9725,
+          0.9619,
+          0.959
+        ],
+        "top_sections": [
+          "TRC :",
+          "TRC :",
+          "chapter 1 se hi hoga.",
+          "TRC :",
+          "TRC :"
+        ]
+      },
+      {
+        "id": "dbms_2nf",
+        "question": "What is second normal form and what is a partial dependency?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "2nf",
+          "partial dependency",
+          "candidate key",
+          "prime"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.8446,
+          0.7744,
+          0.7106,
+          0.4564,
+          0.2867
+        ],
+        "top_sections": [
+          "Full Dependency:",
+          "Partial Dependency:",
+          "Every X Y must satisfy the following condition :",
+          "Full Dependency:",
+          "Full Dependency:"
+        ]
+      },
+      {
+        "id": "dbms_minimal_cover",
+        "question": "How do you find the minimal cover of a set of functional dependencies?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 0.8,
+        "keyword_recall": 0.75,
+        "keywords_found": [
+          "minimal cover",
+          "redundant",
+          "closure"
+        ],
+        "keywords_missing": [
+          "functional dependency"
+        ],
+        "top_scores": [
+          0.9984,
+          0.996,
+          0.9703,
+          0.8113,
+          0.0795
+        ],
+        "top_sections": [
+          "Example :",
+          "Method 2 :",
+          "Method 2 :",
+          "Method 2 :",
+          "Full Dependency:"
+        ]
+      },
+      {
+        "id": "dbms_participation",
+        "question": "What is the difference between total and partial participation in an ER diagram?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "total participation",
+          "partial",
+          "entity",
+          "relationship"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.8824,
+          0.5696,
+          0.5436,
+          0.5217,
+          0.4162
+        ],
+        "top_sections": [
+          "RDBMS",
+          "Total participation :",
+          "RDBMS",
+          "Total participation :",
+          "Total participation :"
+        ]
+      },
+      {
+        "id": "dbms_joins",
+        "question": "What is the difference between a natural join and an outer join?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 0.75,
+        "keywords_found": [
+          "natural join",
+          "outer join",
+          "common attribute"
+        ],
+        "keywords_missing": [
+          "null"
+        ],
+        "top_scores": [
+          0.9925,
+          0.8946,
+          0.8582,
+          0.6842,
+          0.6446
+        ],
+        "top_sections": [
+          "Equi join :",
+          "TYPE 2 :",
+          "TYPE 2 :",
+          "Equi join :",
+          "Equi join :"
+        ]
+      },
+      {
+        "id": "dbms_group_by_having",
+        "question": "How do GROUP BY and HAVING work in SQL, and how is HAVING different from WHERE?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 0.6,
+        "keyword_recall": 0.75,
+        "keywords_found": [
+          "group by",
+          "having",
+          "where"
+        ],
+        "keywords_missing": [
+          "aggregate"
+        ],
+        "top_scores": [
+          0.8755,
+          0.001,
+          0.0007,
+          0.0006,
+          0.0005
+        ],
+        "top_sections": [
+          "SQL clauses :",
+          "SQL clauses :",
+          "SELECT, SELECT, SELECT..",
+          "SQL clauses :",
+          "SQL clauses :"
+        ]
+      },
+      {
+        "id": "dbms_view_serializability",
+        "question": "What is view serializability and how is it different from conflict serializability?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "view serializ",
+          "conflict serializ",
+          "blind write",
+          "initial read"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9979,
+          0.9978,
+          0.9933,
+          0.993,
+          0.9891
+        ],
+        "top_sections": [
+          "SERIAL",
+          "SERIAL",
+          "Process :",
+          "SERIAL",
+          "Process :"
+        ]
+      },
+      {
+        "id": "dbms_strict_2pl",
+        "question": "What is strict two-phase locking and why is it used instead of basic 2PL?",
+        "hit_rate": {
+          "@1": 0.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "precision_at_k": 0.6,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "strict",
+          "exclusive",
+          "commit",
+          "cascad"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.7931,
+          0.7306,
+          0.6851,
+          0.504,
+          0.1389
+        ],
+        "top_sections": [
+          "NOT GRANTED",
+          "1.2. Rigourious 2PL : 2PL + All locks [shared and exclusive] will be released only after commit",
+          "1.1 Strict 2PL : 2PL + All exclusive lock [X-lock] taken by transaction will be released only after",
+          "Lock compatible matrix :",
+          "CONSERVATIVE"
+        ]
+      },
+      {
+        "id": "dbms_deadlock_prevention",
+        "question": "How do wait-die and wound-wait schemes prevent deadlock?",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 0.6,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "wait-die",
+          "wound",
+          "timestamp",
+          "older"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9964,
+          0.5583,
+          0.0667,
+          0.0274,
+          0.0152
+        ],
+        "top_sections": [
+          "CONSERVATIVE",
+          "OLDER YOUNGER",
+          "CONSERVATIVE",
+          "OLDER YOUNGER",
+          "CONSERVATIVE"
+        ]
+      },
+      {
+        "id": "algo_merge_vs_quick",
+        "question": "Compare merge sort and quick sort in terms of time complexity and space.",
+        "hit_rate": {
+          "@1": 1.0,
+          "@3": 1.0,
+          "@5": 1.0
+        },
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "precision_at_k": 1.0,
+        "keyword_recall": 1.0,
+        "keywords_found": [
+          "merge sort",
+          "quick sort",
+          "o(n log n)",
+          "o(n^2)"
+        ],
+        "keywords_missing": [],
+        "top_scores": [
+          0.9989,
+          0.9987,
+          0.9986,
+          0.9941,
+          0.9878
+        ],
+        "top_sections": [
+          "Time Complexity:",
+          "1.4 Comparison: Merge Sort vs Quick Sort",
+          "Time Complexity:",
+          "1.2 Merge Sort",
+          "1.2 Merge Sort"
+        ]
+      }
+    ],
+    "summary": {
+      "mode": "rerank",
+      "k": 5,
+      "num_cases": 25,
+      "hit_rate": {
+        "@1": 0.96,
+        "@3": 1.0,
+        "@5": 1.0
+      },
+      "mrr": 0.98,
+      "precision_at_k": 0.8320000000000001,
+      "keyword_recall": 0.92,
+      "avg_top1_score": 0.959768
+    }
+  },
+  "retrieval_comparison": {
+    "basic": {
+      "mode": "basic",
+      "k": 5,
+      "num_cases": 25,
+      "hit_rate": {
+        "@1": 1.0,
+        "@3": 1.0,
+        "@5": 1.0
+      },
+      "mrr": 1.0,
+      "precision_at_k": 0.816,
+      "keyword_recall": 0.92,
+      "avg_top1_score": 0.629696
+    },
+    "adaptive": {
+      "mode": "adaptive",
+      "k": 5,
+      "num_cases": 25,
+      "hit_rate": {
+        "@1": 0.96,
+        "@3": 1.0,
+        "@5": 1.0
+      },
+      "mrr": 0.98,
+      "precision_at_k": 0.8320000000000001,
+      "keyword_recall": 0.92,
+      "avg_top1_score": 0.959768
+    },
+    "rerank": {
+      "mode": "rerank",
+      "k": 5,
+      "num_cases": 25,
+      "hit_rate": {
+        "@1": 0.96,
+        "@3": 1.0,
+        "@5": 1.0
+      },
+      "mrr": 0.98,
+      "precision_at_k": 0.8320000000000001,
+      "keyword_recall": 0.92,
+      "avg_top1_score": 0.959768
+    }
+  },
+  "retrieval_gold": {
+    "basic": {
+      "per_case": [
+        {
+          "id": "dbms_bcnf",
+          "ndcg": 0.596881495845591,
+          "recall": 0.2222222222222222,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "dbms_closure",
+          "ndcg": 0.4104889601851254,
+          "recall": 0.2,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "dbms_lossless",
+          "ndcg": 0.6843515475204855,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "dbms_candidate_key",
+          "ndcg": 0.8926893079768027,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "dbms_foreign_key",
+          "ndcg": 0.9125299483251055,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_weak_entity",
+          "ndcg": 0.5442229814382792,
+          "recall": 0.5,
+          "reciprocal_rank": 0.5,
+          "precision": 0.6,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "dbms_exists",
+          "ndcg": 0.4104889601851254,
+          "recall": 0.16666666666666666,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "dbms_trc",
+          "ndcg": 0.7878483464942911,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "dbms_acid",
+          "ndcg": 0.5417552559952586,
+          "recall": 0.4,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "id": "dbms_conflict_serializability",
+          "ndcg": 0.6238040886593808,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "dbms_recoverable",
+          "ndcg": 0.646910188523972,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "dbms_2pl",
+          "ndcg": 0.7895676983469904,
+          "recall": 0.6,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "dbms_timestamp",
+          "ndcg": 0.8539316501572936,
+          "recall": 0.36363636363636365,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "dbms_bplus_tree",
+          "ndcg": 0.773893196484256,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 0.5,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_dense_sparse",
+          "ndcg": 0.6863024195657901,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "dbms_blocking_factor",
+          "ndcg": 0.8057635919248217,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_2nf",
+          "ndcg": 0.9026211001048624,
+          "recall": 0.4444444444444444,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "dbms_minimal_cover",
+          "ndcg": 0.7033907938361063,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 0.5,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_participation",
+          "ndcg": 0.47476776900380596,
+          "recall": 0.0,
+          "reciprocal_rank": 0.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "dbms_joins",
+          "ndcg": 0.7994765465672335,
+          "recall": 0.5,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_group_by_having",
+          "ndcg": 0.6258701109067025,
+          "recall": 0.5,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "dbms_view_serializability",
+          "ndcg": 0.8869465982421281,
+          "recall": 0.5714285714285714,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_strict_2pl",
+          "ndcg": 0.8076572091794476,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "id": "dbms_deadlock_prevention",
+          "ndcg": 0.4616555840244296,
+          "recall": 0.4,
+          "reciprocal_rank": 0.25,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            1,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "algo_merge_vs_quick",
+          "ndcg": 0.8573424901769817,
+          "recall": 0.8,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "summary": {
+        "mode": "basic",
+        "k": 5,
+        "num_cases": 25,
+        "ndcg": 0.6992463135868107,
+        "recall": 0.48006926406926403,
+        "reciprocal_rank": 0.87,
+        "precision": 0.8079999999999999,
+        "unjudged": 0
+      }
+    },
+    "adaptive": {
+      "per_case": [
+        {
+          "id": "dbms_bcnf",
+          "ndcg": 1.0,
+          "recall": 0.5555555555555556,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_closure",
+          "ndcg": 0.3391602052736162,
+          "recall": 0.2,
+          "reciprocal_rank": 1.0,
+          "precision": 0.2,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "dbms_lossless",
+          "ndcg": 0.8869465982421281,
+          "recall": 0.4444444444444444,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_candidate_key",
+          "ndcg": 0.9935774939007994,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "dbms_foreign_key",
+          "ndcg": 0.9125299483251055,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_weak_entity",
+          "ndcg": 0.7042926318763895,
+          "recall": 0.75,
+          "reciprocal_rank": 0.5,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            2,
+            2,
+            0
+          ]
+        },
+        {
+          "id": "dbms_exists",
+          "ndcg": 0.38289523111106344,
+          "recall": 0.16666666666666666,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "dbms_trc",
+          "ndcg": 0.7246005029668242,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "dbms_acid",
+          "ndcg": 0.7261374126646399,
+          "recall": 0.6,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            2,
+            0
+          ]
+        },
+        {
+          "id": "dbms_conflict_serializability",
+          "ndcg": 0.5524753337478715,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "dbms_recoverable",
+          "ndcg": 0.8573424901769817,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_2pl",
+          "ndcg": 0.7429498456882975,
+          "recall": 0.6,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_timestamp",
+          "ndcg": 1.0,
+          "recall": 0.45454545454545453,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_bplus_tree",
+          "ndcg": 0.48516733681853114,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 0.3333333333333333,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            1,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "dbms_dense_sparse",
+          "ndcg": 0.9322978750325865,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "dbms_blocking_factor",
+          "ndcg": 0.5283833395762048,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 0.25,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_2nf",
+          "ndcg": 1.0,
+          "recall": 0.5555555555555556,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_minimal_cover",
+          "ndcg": 0.6689670830051391,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 0.5,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "id": "dbms_participation",
+          "ndcg": 0.9578347709816888,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "dbms_joins",
+          "ndcg": 0.7895676983469904,
+          "recall": 0.5,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "dbms_group_by_having",
+          "ndcg": 0.7927064172140198,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "id": "dbms_view_serializability",
+          "ndcg": 1.0,
+          "recall": 0.7142857142857143,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_strict_2pl",
+          "ndcg": 0.6689670830051391,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 0.5,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "id": "dbms_deadlock_prevention",
+          "ndcg": 0.6043130938474479,
+          "recall": 0.6,
+          "reciprocal_rank": 0.5,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "algo_merge_vs_quick",
+          "ndcg": 0.8869465982421281,
+          "recall": 0.8,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            2,
+            2
+          ]
+        }
+      ],
+      "summary": {
+        "mode": "adaptive",
+        "k": 5,
+        "num_cases": 25,
+        "ndcg": 0.7655223596017438,
+        "recall": 0.610975468975469,
+        "reciprocal_rank": 0.8633333333333333,
+        "precision": 0.8240000000000001,
+        "unjudged": 0
+      }
+    },
+    "rerank": {
+      "per_case": [
+        {
+          "id": "dbms_bcnf",
+          "ndcg": 1.0,
+          "recall": 0.5555555555555556,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_closure",
+          "ndcg": 0.3391602052736162,
+          "recall": 0.2,
+          "reciprocal_rank": 1.0,
+          "precision": 0.2,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "dbms_lossless",
+          "ndcg": 0.8869465982421281,
+          "recall": 0.4444444444444444,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_candidate_key",
+          "ndcg": 0.9935774939007994,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "dbms_foreign_key",
+          "ndcg": 0.9125299483251055,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_weak_entity",
+          "ndcg": 0.7042926318763895,
+          "recall": 0.75,
+          "reciprocal_rank": 0.5,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            2,
+            2,
+            0
+          ]
+        },
+        {
+          "id": "dbms_exists",
+          "ndcg": 0.38289523111106344,
+          "recall": 0.16666666666666666,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "dbms_trc",
+          "ndcg": 0.7246005029668242,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 0.4,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "dbms_acid",
+          "ndcg": 0.7261374126646399,
+          "recall": 0.6,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            2,
+            0
+          ]
+        },
+        {
+          "id": "dbms_conflict_serializability",
+          "ndcg": 0.5524753337478715,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "unjudged": 0,
+          "grades": [
+            2,
+            0,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "dbms_recoverable",
+          "ndcg": 0.8573424901769817,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_2pl",
+          "ndcg": 0.7429498456882975,
+          "recall": 0.6,
+          "reciprocal_rank": 1.0,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_timestamp",
+          "ndcg": 1.0,
+          "recall": 0.45454545454545453,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_bplus_tree",
+          "ndcg": 0.48516733681853114,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 0.3333333333333333,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            1,
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "id": "dbms_dense_sparse",
+          "ndcg": 0.9322978750325865,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "dbms_blocking_factor",
+          "ndcg": 0.5283833395762048,
+          "recall": 0.3333333333333333,
+          "reciprocal_rank": 0.25,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            1,
+            1,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "dbms_2nf",
+          "ndcg": 1.0,
+          "recall": 0.5555555555555556,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_minimal_cover",
+          "ndcg": 0.6689670830051391,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 0.5,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "id": "dbms_participation",
+          "ndcg": 0.9578347709816888,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "dbms_joins",
+          "ndcg": 0.7895676983469904,
+          "recall": 0.5,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "dbms_group_by_having",
+          "ndcg": 0.7927064172140198,
+          "recall": 1.0,
+          "reciprocal_rank": 1.0,
+          "precision": 0.6,
+          "unjudged": 0,
+          "grades": [
+            2,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "id": "dbms_view_serializability",
+          "ndcg": 1.0,
+          "recall": 0.7142857142857143,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "dbms_strict_2pl",
+          "ndcg": 0.6689670830051391,
+          "recall": 0.6666666666666666,
+          "reciprocal_rank": 0.5,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "id": "dbms_deadlock_prevention",
+          "ndcg": 0.6043130938474479,
+          "recall": 0.6,
+          "reciprocal_rank": 0.5,
+          "precision": 0.8,
+          "unjudged": 0,
+          "grades": [
+            1,
+            2,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "algo_merge_vs_quick",
+          "ndcg": 0.8869465982421281,
+          "recall": 0.8,
+          "reciprocal_rank": 1.0,
+          "precision": 1.0,
+          "unjudged": 0,
+          "grades": [
+            2,
+            2,
+            1,
+            2,
+            2
+          ]
+        }
+      ],
+      "summary": {
+        "mode": "rerank",
+        "k": 5,
+        "num_cases": 25,
+        "ndcg": 0.7655223596017438,
+        "recall": 0.610975468975469,
+        "reciprocal_rank": 0.8633333333333333,
+        "precision": 0.8240000000000001,
+        "unjudged": 0
+      }
+    }
+  },
+  "adaptive_levels": {
+    "beginner": {
+      "ndcg": 0.727896770976734,
+      "share": {
+        "basic": 0.464,
+        "intermediate": 0.464,
+        "advanced": 0.072
+      },
+      "questions_changed": 9
+    },
+    "intermediate": {
+      "ndcg": 0.7655223596017439,
+      "share": {
+        "basic": 0.368,
+        "intermediate": 0.504,
+        "advanced": 0.128
+      },
+      "questions_changed": 0
+    },
+    "advanced": {
+      "ndcg": 0.7060932093153505,
+      "share": {
+        "basic": 0.296,
+        "intermediate": 0.52,
+        "advanced": 0.184
+      },
+      "questions_changed": 12
+    }
+  },
+  "unanswerable": {
+    "per_case": [
+      {
+        "id": "oos_hashing",
+        "question": "How does extendible hashing handle bucket overflow?",
+        "answer": "I couldn't find any relevant information in your course material for this question. Could you rephrase it or ask about a specific topic?",
+        "refused": true,
+        "reason": "No chunk passed the relevance threshold; LLM not called.",
+        "llm_called": false
+      },
+      {
+        "id": "oos_cap",
+        "question": "Explain the CAP theorem for distributed databases.",
+        "answer": "I couldn't find any relevant information in your course material for this question. Could you rephrase it or ask about a specific topic?",
+        "refused": true,
+        "reason": "No chunk passed the relevance threshold; LLM not called.",
+        "llm_called": false
+      },
+      {
+        "id": "oos_kubernetes",
+        "question": "What is a Kubernetes pod?",
+        "answer": "I couldn't find any relevant information in your course material for this question. Could you rephrase it or ask about a specific topic?",
+        "refused": true,
+        "reason": "No chunk passed the relevance threshold; LLM not called.",
+        "llm_called": false
+      },
+      {
+        "id": "oos_gradient_descent",
+        "question": "How does gradient descent update model weights?",
+        "answer": "I couldn't find any relevant information in your course material for this question. Could you rephrase it or ask about a specific topic?",
+        "refused": true,
+        "reason": "No chunk passed the relevance threshold; LLM not called.",
+        "llm_called": false
+      },
+      {
+        "id": "oos_tcp",
+        "question": "Describe the TCP three-way handshake.",
+        "answer": "I couldn't find any relevant information in your course material for this question. Could you rephrase it or ask about a specific topic?",
+        "refused": true,
+        "reason": "No chunk passed the relevance threshold; LLM not called.",
+        "llm_called": false
+      }
+    ],
+    "summary": {
+      "mode": "rerank",
+      "num_cases": 5,
+      "refusal_rate": 1.0,
+      "llm_calls_avoided": 5
+    }
+  },
+  "generation": {
+    "per_case": [
+      {
+        "id": "dbms_bcnf",
+        "question": "What is BCNF and how is it different from 3NF?",
+        "answer": "Based on your course materials, here is an intermediate-level breakdown of Boyce-Codd Normal Form (BCNF) and how it compares to 3NF.\n\n### 1. What is BCNF (Boyce-Codd Normal Form)?\nAccording to the course materials, a relation schema $R$ is in BCNF only if whenever a non-trivial functional dependency $X \\rightarrow A$ holds in $R$, then **$X$ must be a super-key of $R$** (Source 1 & Source 3). \n\nTo put this in perspective regarding redundancy:\n* Trivial FDs do not create redundancy (Source 4).\n* Non-trivial FDs where $X$ is a super-key also do not create redundancy (Source 4). \n* Therefore, BCNF ensures that redundancy caused by certain functional dependencies is removed, though doing so might result in more tables with fewer entries overall (Source 1).\n\n### 2. How does it differ from 3NF?\nTo see the difference, let's look at the conditions required for each:\n\n* **3NF Condition:** A relation schema $R$ is in 3NF if every non-trivial functional dependency $X \\rightarrow Y$ satisfies **at least one** of the following conditions (Source 5):\n  1. $X$ is a super-key, **OR**\n  2. $Y$ is a key or prime attribute (meaning $Y$ is part of a candidate key).\n\n* **BCNF Condition:** For a relation to be in BCNF, it strictly requires that **$X$ must be a super-key** for every non-trivial functional dependency $X \\rightarrow A$ (Source 1 & Source 3). It does *not* allow the second condition of 3NF (where $Y$ being a prime attribute is enough). \n\nBecause BCNF has a stricter requirement (it only allows condition 1, whereas 3NF allows condition 1 *or* 2), any relation in BCNF is also in 3NF, but a relation in 3NF is not automatically in BCNF. \n\n*(Sources used: [Source 1], [Source 3], [Source 4], and [Source 5])*",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the assistant's answer is directly supported by the provided context sources.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly defines BCNF and clearly explains its differences from 3NF as requested.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers the definition of BCNF, the 3NF alternative condition for prime attributes, and the stricter nature of BCNF, though it misses the point about BCNF decomposition potentially not preserving dependencies.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_closure",
+        "question": "How do you find the closure of an attribute set and use it to find candidate keys?",
+        "answer": "Hello! I'd be happy to help you understand how attribute closures and candidate keys work based on your course material. \n\nTo break this down step by step:\n\n**1. Understanding Attribute Closures**\nWhile the exact step-by-step algorithm for calculating a closure isn't fully written out in every detail, the context shows examples of computing the closure of attributes (denoted with a `+` sign, such as $[B]^+$ or $[AB]^+$) to see which attributes they can determine [Source 1, Source 4]. For instance, looking at a functional dependency like $B \\rightarrow E$, taking the closure of $B$ gives us $[B]^+ = [BEFGH]$ (or in another example, $[B]^+ = BEF$) [Source 1, Source 4]. The closure tells you all the attributes that can be reached or uniquely determined starting from your initial set of attributes.\n\n**2. Moving from Superkeys to Candidate Keys**\n* **Superkeys and Irreducibility:** A superkey is a set of attributes that can uniquely determine all attributes in a relation. A candidate key is a special type of superkey: it is a *minimal* superkey, meaning it cannot be further decomposed (if you remove any attribute from it, it stops being a superkey) [Source 1]. For example, if $AB$ is a superkey and cannot be further decomposed, it serves as a candidate key [Source 1]. \n* **Prime vs. Non-Key Attributes:** Attributes that are part of a candidate key are called **key or prime attributes**, while the rest are **non-key or non-prime attributes** [Source 1].\n* **Handling Multiple Candidate Keys:** According to your material, if any attribute in a candidate key is a prime attribute, multiple candidate keys might be possible [Source 1]. Furthermore: *\"If we are deriving a 2 attribute candidate key then firstly break it and check if individual closure are giving us possible attributes or not.\"* [Source 1]\n\nTo guide your thinking for your current studies: If you are given a set of functional dependencies and need to find a candidate key, try starting with individual attributes (or combinations) to find their closures. Look for the minimal combination of attributes whose closure includes *every* attribute in the entire relation. \n\nAccording to your course material:\n* **Source 1:** Database management system (complete).pdf | Finding Multiple Candidate key\n* **Source 4:** Database management system (complete).pdf | Every X Y must satisfy the following condition\n\nWhat specific relation or set of functional dependencies are you currently working on? If you share them, we can walk through finding the closure together!",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 4,
+        "faithfulness_reason": "Most claims are directly supported by the context, though the explanation of a superkey determining all attributes relies slightly on general knowledge rather than explicit textual definition in the snippets.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly addresses how to find attribute closures and use them to find candidate keys based on the provided material.",
+        "completeness": 3,
+        "completeness_reason": "The answer touches on attribute sets and candidate/minimal keys, but misses explicitly explaining the iterative process of adding attributes determined by applicable FDs or checking if the closure contains all attributes of the relation.",
+        "unsupported_claims": [
+          "A superkey is a set of attributes that can uniquely determine all attributes in a relation."
+        ]
+      },
+      {
+        "id": "dbms_lossless",
+        "question": "What is a lossless join decomposition and how do you check it?",
+        "answer": "Based on your course material, here is a breakdown of what lossless join decomposition is and the methods used to check it:\n\n### **1. Basic Concept**\nWhen a relation schema $R$ is decomposed into sub-relations ($R_1, R_2, R_3, \\dots, R_n$), you want to ensure that joining them back together via a natural join ($\\bowtie$) gives you back the exact original relation without losing or gaining any spurious (extra) tuples. \n* **Lossless Join Decomposition:** If the natural join of the sub-relations equals the original relation ($R_1 \\bowtie R_2 \\dots \\bowtie R_n = R$), it is a lossless join decomposition (Source 4).\n* **Lossy Join Decomposition:** If joining the sub-relations results in *more* tuples than the original relation ($R_1 \\bowtie R_2 \\dots \\bowtie R_n > R$), it is a lossy join decomposition (Source 4).\n\n---\n\n### **2. How to Check for Lossless Join**\n\nYour course material covers multiple methods to check for a lossless join:\n\n#### **Method A: The Binary Method (for two sub-relations $R_1$ and $R_2$)**\nLet relation schema $R$ with a set of functional dependencies $F$ be decomposed into two sub-relations, $R_1$ and $R_2$. \n* The decomposition is **lossless** if and only if $R_1 \\cup R_2 \\equiv R$ **and** the common attributes between $R_1$ and $R_2$ form a super-key of either $R_1$ or $R_2$ (Source 2).\n* *Example check from text:* If $R_1(AB)$ and $R_2(BC)$, their intersection is $R_1 \\cap R_2 = B$. You find the closure $[B]^+$. If $B$ is not a super-key of either $R_1$ or $R_2$, then it is considered **lossy** (Source 5). *(Note: R1 and R2 must be checked in pairs; do not declare lossy/lossless based on a single partial result if there are three relations like $R_1, R_2, R_3$ (Source 5)).*\n\n#### **Method B: The Chase Test (using a matrix)**\nWhen checking with the Chase test:\n1. **Step 1:** Create a matrix where the rows (tuples) represent the sub-relations, and the columns represent the respective attributes (Source 1). \n2. Fill the matrix based on the sub-relations and functional dependencies. \n3. **Stopping criteria:** The Chase test will stop under two conditions:\n   * You get *at least one tuple* with all `'a'` entries (which means the decomposition is **lossless**).\n   * OR there are no further updates possible in the table (Source 1).\n\nSources used: \n* [Source 1: Database management system (complete).pdf | Method 2 :]\n* [Source 2: Database management system (complete).pdf | Method 2 :]\n* [Source 4: Database management system (complete).pdf | Method 2 :]\n* [Source 5: Database management system (complete).pdf | Method 2 :]",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the assistant's answer is directly derived from and supported by the provided retrieved context.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively addresses what a lossless join decomposition is and how to check it using the methods present in the text.",
+        "completeness": 5,
+        "completeness_reason": "The answer successfully covers all reference key points including the definition of lossless joins, avoiding spurious tuples, the binary method rule involving super keys, and mentioning other checking techniques.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_candidate_key",
+        "question": "What is the difference between a super key, candidate key and primary key?",
+        "answer": "Based on your course material, here is the breakdown of the differences between a super key, candidate key, and primary key, explained step by step:\n\n*   **Super-key:** A super-key is a set of one or more attributes that, taken collectively, allow us to identify uniquely a tuple in the relation (Source 2). The material notes that \"any superset of a superkey is also a superkey\" (Source 2, Source 3). \n*   **Candidate-key:** A candidate key is a *minimal* super-key. As the notes state, it is the \"minimum se minimum se minimum attribute or set of attribute which cannot be further Decomposed and is mandatory and required to identify each tuple in relation\" (Source 2). In other words, if you remove any attribute from a candidate key, it ceases to be a super-key. Because of this, the material emphasizes a fundamental rule: *\"Every candidate key is a super-key, [but] every super-key is not a candidate key because candidate key is a minimal of super-key\"* (Source 1). Furthermore, candidate keys must be \"unique + not null\" (Source 3).\n*   **Primary-key:** Once you have identified your candidate key(s) for a relation, you select *one* of them to serve as the **Primary-key** (Source 1, Source 2, Source 3). A relation can have at most one primary key (Source 3). Real-world examples given for primary/alternative keys include an account number, Aadhar card, PAN card, registered mobile number, and date of birth (Source 1, Source 3).\n\nSources used: \n- [Source 1: Database management system (complete).pdf | ABCDG]\n- [Source 2: Database management system (complete).pdf | ABCDG]\n- [Source 3: Database management system (complete).pdf | ABCDG]",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the assistant's answer is directly supported by the provided text.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively addresses the differences between a super key, candidate key, and primary key as requested in the question.",
+        "completeness": 5,
+        "completeness_reason": "The answer covers all the reference key points regarding super keys, candidate keys, and primary keys.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_foreign_key",
+        "question": "Explain foreign keys and referential integrity.",
+        "answer": "Hello! Let's break down foreign keys and referential integrity step by step using your course materials.\n\n### 1. What is a Foreign Key?\nA **foreign key** is a set of attributes that references the primary key (or alternative key) of the *same table* or *some other table* [Source 1]. \n\nTo keep terms straight:\n* **Referencing relation (Child table):** The table that contains the foreign key [Source 1].\n* **Referenced relation (Parent table):** The table that is referenced by the foreign key [Source 1].\n\n**Important characteristics of foreign keys:**\n* A foreign key may contain duplicate and `NULL` values [Source 4].\n* Any value present in a foreign key *must* be present in the corresponding primary key [Source 4].\n* A referencing relation can have more than one foreign key [Source 4].\n* Sometimes, a single table can contain both the primary key and a foreign key (for example, an `Employee` table where `eid` is the primary key and `manager id` is a foreign key referencing `eid` in the same table) [Source 2, Source 5].\n\n### 2. What is Referential Integrity?\nReferential integrity is a constraint (specifically, the referential integrity constraint) managed through the concept of foreign keys [Source 5]. It ensures that relationships between tables remain consistent. \n\nWhen dealing with data modifications, keep these rules in mind:\n* **Insertion:** Inserting a tuple into the *referencing relation* (child table) may violate the foreign key constraint [Source 3]. However, when inserting, the system only checks the referential integrity constraint; it does not re-check domain, key, or entity integrity because those are assumed to be validated already [Source 3].\n* **Deletion:** Deleting a primary key from the *referenced relation* (parent table) may also violate the foreign key constraint if that primary key is currently being used as a foreign key [Source 3, Source 4]. Because of this, you cannot perform a \"blind deletion\" of a primary key that is in use [Source 4]. Instead, actions like `On delete cascade` or `On delete set null` are used to handle what happens to the dependent foreign key values [Source 2].\n\n***\n\n**Sources Cited:**\n* [Source 1: Database management system (complete).pdf | Representation :]\n* [Source 2: Database management system (complete).pdf | Important point about the foreign key :]\n* [Source 3: Database management system (complete).pdf | Important point about the foreign key :]\n* [Source 4: Database management system (complete).pdf | Important point about the foreign key :]\n* [Source 5: Database management system (complete).pdf | Representation :]\n\nLet me know if you'd like to explore how specific deletion actions (like cascade or set null) work with an example!",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the assistant's answer is directly supported by the provided source documents.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively addresses the question about foreign keys and referential integrity.",
+        "completeness": 5,
+        "completeness_reason": "The answer covers all reference key points including foreign key definition, referential integrity rules, and deletion/update handling mechanisms like cascade and set null.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_weak_entity",
+        "question": "What is a weak entity set in the ER model?",
+        "answer": "Based on your course material, here is a breakdown of what a weak entity set is in the ER model:\n\n### Definition\nA **weak entity set** is an entity set that does not have any key attribute to differentiate or uniquely identify each entity within the set on its own (Sources 3 & 4). Instead, it has a \"partial key\" (Source 3). \n\n### Key Characteristics & Requirements\nAccording to your notes, weak entity sets must adhere to specific rules to exist and be identified:\n1. **Owner Entity Set:** For every weak entity set, there must be an \"owner\" (or identifying) entity set, which is a strong entity set (Source 2).\n2. **Relationship:** The weak entity set and the owner entity set must participate in a one-to-many relationship set (one owner, many weak entities) (Source 2). This relationship between them is called a \"weak relationship set\" (Source 2).\n3. **Total Participation:** The weak entity set must have *total participation* in this identifying relationship set (Source 2).\n4. **Identification (Composite Key):** Because a weak entity lacks its own full primary key, it is uniquely identified by considering the primary key of its owner entity combined with its own partial key (Sources 2 & 4). \n\n### Example\nThink about an **employee** and their **dependent** (such as an insurance policy) (Source 4):\n* **Strong/Owner Entity:** `employee` (which has a key attribute like employee ID, `eid`) (Source 4).\n* **Weak Entity:** `dependent` or `policy` (Source 4). \n* **The Problem:** If you only look at the policy holder's name (`pname`), you cannot get complete information because there might be many other dependents with the same name. Therefore, the policy holder name is only a *partial key* and is not sufficient to define the policy (Source 4).\n* **The Solution:** To uniquely identify the policy, you need the combination of the policy holder name plus the employee ID (`pname + eid`) (Source 4).\n\n*(Sources used: [Source 2: Database management system (complete).pdf | Representation], [Source 3: Database management system (complete).pdf | RDBMS], [Source 4: Database management system (complete).pdf | Representation])*",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the assistant's answer is directly supported by the provided retrieved context.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively addresses what a weak entity set is in the ER model using the provided context.",
+        "completeness": 5,
+        "completeness_reason": "The answer covers all reference key points including the lack of a primary key, dependence on an owner/strong entity via an identifying relationship, total participation, and identification via the owner's key plus a partial key.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_exists",
+        "question": "How does the EXISTS clause work in SQL nested queries?",
+        "answer": "Based on your course material, here is how correlated nested queries involving the topic of `EXISTS` and `NOT EXISTS` work:\n\nAccording to [Source 1: Database management system (complete).pdf | R minus all (except all) S :], queries using these concepts execute on the database table tuple by tuple (row by row), processing one tuple at a time from the outer query to the inner query. \n\nHere is how the execution flow (top to bottom to top) breaks down step by step:\n1. **Co-related nested query definition:** This is an inner query that uses an attribute defined in the outer query [Source 1].\n2. **Execution Sequence:** The sequence follows a repeating pattern of outer query $\\rightarrow$ inner query $\\rightarrow$ outer query [Source 1]. \n3. **Tuple-by-tuple processing:** \n   - For the 1st tuple in the outer query ($i=1$), the inner query executes completely for all its iterations ($j=1 \\text{ to } m$) [Source 1].\n   - Then, it moves to the 2nd tuple in the outer query ($i=2$), and the inner query runs again through all its iterations ($j=1 \\text{ to } m$) [Source 1].\n   - This process repeats sequentially until the $n^{th}$ tuple of the outer query is processed [Source 1].\n\nFor the rest of the specifics regarding syntax or exact condition evaluations for `EXISTS`, you may want to check the topic/chapter on **correlated nested queries and `EXISTS`/`NOT EXISTS`** in your database management system course materials [Source 1].",
+        "retrieval_hit": true,
+        "num_chunks": 4,
+        "faithfulness": 5,
+        "faithfulness_reason": "All claims made in the answer are directly sourced from the provided text.",
+        "relevancy": 3,
+        "relevancy_reason": "While it discusses related execution flow, it does not explain how the EXISTS clause logically works (returning true/false based on rows), reflecting the limitations of the retrieved text.",
+        "completeness": 1,
+        "completeness_reason": "The answer misses all the key reference points because the retrieved text does not contain definitions for what EXISTS or NOT EXISTS evaluate to.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_trc",
+        "question": "What is tuple relational calculus?",
+        "answer": "Based on your course material, here is a breakdown of Tuple Relational Calculus (TRC) at an intermediate level:\n\n### What is Tuple Relational Calculus?\nAccording to [Source 1: Database management system (complete).pdf | WHERE EXISTS (SELECT*], relational calculus is based on predicate calculus, and Tuple Relational Calculus (TRC) is one of its types (while domain relational calculus is noted as not in the syllabus).\n\n### Key Characteristics of TRC:\n1. **Basic Unit:** TRC takes a tuple and examines it row by row, using a **tuple** as its basic unit [Source 1 & 2].\n2. **Tuple Variable:** It uses a variable that takes on tuples of a relational schema as values [Source 1]. Every value assigned to a given tuple variable has the same number and type of fields [Source 3]. \n   - For example, if you have a relation $R(ABC)$ and a tuple variable $t$, writing $t \\in R$ (or $r(t)$) means $t$ is a tuple variable in relation $R$, allowing $t$ to take the tuples of $R$ [Source 3].\n\n### Syntax\nThe standard syntax for TRC is:\n$$\\{t \\mid p(t)\\}$$\n\nWhere:\n* **$t$** is the tuple variable [Source 1].\n* **$p(t)$** is a formula that describes the tuple variable [Source 1].\n\n***\n\n*For more details on how formulas are constructed or specific query examples beyond the basic schema definition provided in [Source 3], you may want to check the relational calculus and predicate calculus sections of your course material.*",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 4,
+        "faithfulness_reason": "Most claims are directly supported by the context, though it mentions 'intermediate level' which is not explicitly stated.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively explains what tuple relational calculus is based on the retrieved context.",
+        "completeness": 2,
+        "completeness_reason": "The answer covers the syntax and tuple variables present in the context, but misses key points like non-procedural nature and quantifiers which were absent from the limited context.",
+        "unsupported_claims": [
+          "at an intermediate level"
+        ]
+      },
+      {
+        "id": "dbms_acid",
+        "question": "What are the ACID properties of a transaction?",
+        "answer": "According to [Source 1: Database management system (complete).pdf | Transaction and concurrency control], to maintain integrity, a transaction must satisfy the ACID properties, which stand for:\n\n* **A** - Atomicity\n* **C** - Consistency\n* **I** - Isolation\n* **D** - Durability\n\nAs defined in the course material, a transaction itself is a set of logically related operations (such as Read and Write) that perform as a unit of work (for example, transferring 1000 from account A to account B).",
+        "retrieval_hit": true,
+        "num_chunks": 1,
+        "faithfulness": 5,
+        "faithfulness_reason": "All claims made in the answer are directly supported by the retrieved context.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly addresses the question about the ACID properties of a transaction.",
+        "completeness": 2,
+        "completeness_reason": "The answer lists the four ACID acronym letters and defines a transaction, but does not provide the definitions/key points for any of the individual ACID properties since they are absent from the context.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_conflict_serializability",
+        "question": "What is conflict serializability and how do you test a schedule for it?",
+        "answer": "Hello! I'd be happy to help you understand conflict serializability and how to test for it based on your course material.\n\n### What is Conflict Serializability?\n\nTo understand conflict serializability, we first need to look at what makes two operations conflict. According to your course materials, two operations are considered **conflict operations** if they meet these conditions:\n* They belong to two different transactions.\n* They both operate on the same data item (let's call it $A$).\n* At least one of these operations is a write operation [Source 3].\n\nThis gives us three types of conflicting pairs on the same data item:\n1. **Read-Write (RW)**: Transaction $T_i$ reads $A$ and Transaction $T_j$ writes $A$.\n2. **Write-Read (WR)**: Transaction $T_i$ writes $A$ and Transaction $T_j$ reads $A$.\n3. **Write-Write (WW)**: Transaction $T_i$ writes $A$ and Transaction $T_j$ writes $A$.\n\nBecause these operations conflict, their order matters, and swapping them is not possible without potentially changing the outcome of the database [Source 3]. A schedule is **conflict serializable** if it is conflict equivalent to some serial schedule [Source 3]. Furthermore, your notes point out an important relationship with view serializability: *If a schedule is conflict serializable, then it is already view serializable* [Source 2].\n\n---\n\n### How to Test a Schedule for Conflict Serializability\n\nAccording to your course material, there are four methods to handle conflict serializability [Source 3]:\n1. Basic concept (swapping of non-conflicting instructions) [Source 3]\n2. **Testing method (Precedence graph method)** [Source 3]\n3. Conflict operations pair [Source 3]\n4. Conflict equivalent to any serial schedule [Source 3]\n\nLet's look more closely at the **Testing method (Precedence graph method)**, which is prominently featured in your notes for determining if a schedule is conflict serializable:\n\n* **The Rule:** A schedule is conflict serializable **if and only if its precedence graph is acyclic** (meaning it contains no cycles). If the precedence graph contains even *one* cycle, the schedule is *not* conflict serializable [Source 1].\n\n**How you can think about building and testing with a precedence graph:**\n* You examine the order of conflicting operations between different transactions.\n* If a conflict dictates that transaction $T_1$ must come before transaction $T_2$ (for example, $W(Y)$ followed by $R(Y)$ means $T_2$ to $T_1$, or vice-versa depending on the operation sequence), you represent the precedence [Source 1, Source 2].\n* Check for loops/cycles. No cycle = Conflict Serializable! Cycle = Not Conflict Serializable [Source 1].\n\n***\n\nTo help you practice: Do you have a specific schedule in mind that you are trying to test using a precedence graph? Try outlining the conflicting operations between the transactions first, and let me know what you find!",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "All factual claims made in the answer are directly supported by the provided source texts.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively addresses what conflict serializability is and how to test for it.",
+        "completeness": 5,
+        "completeness_reason": "The answer covers all three reference key points including conflicting operations, conflict equivalence to a serial schedule, and the precedence graph acyclic test.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_recoverable",
+        "question": "What is the difference between recoverable and cascadeless schedules?",
+        "answer": "Hello! I'd be happy to help you understand the difference between recoverable and cascadeless schedules based on your course material. \n\nTo break this down step by step:\n\n### 1. Recoverable Schedule\n* **Definition:** A recoverable schedule is one where, if transaction $T_j$ reads a data item previously written by transaction $T_i$, the commit of $T_i$ must appear before the commit of $T_j$ (or, as noted in the summary, commit/rollback appears before the commit of read) [Source 3, Source 5]. \n* **The Rule:** If a transaction fails, a recoverable schedule ensures that transactions can be safely recovered (for example, if a write-then-read occurs, the commit or rollback of the write must appear before the read's commit) [Source 3].\n\n### 2. Cascadeless Schedule\n* **Definition:** A cascadeless schedule is one where each pair of transactions avoids the cascading rollback issue [Source 4, Source 5]. \n* **How it works / Why it's different:** In a cascading rollback, a single transaction failure leads to a series of transaction rollbacks because subsequent transactions depended on uncommitted data (e.g., $T_2, T_3, T_4$ reading data written by $T_1$ before $T_1$ commits) [Source 4]. A cascadeless schedule prevents this by requiring that commit/rollback happens *before* the read [Source 5]. In terms of restrictions, a cascadeless schedule has \"less restriction\" than a strict schedule, but more restriction than a basic recoverable schedule [Source 1, Source 5].\n\n### Key Relationships:\nAccording to your material:\n* Every cascadeless schedule is a recoverable schedule [Source 1].\n* However, every recoverable schedule **may or may not** be cascadeless (the vice versa is not always true) [Source 1]. \n\nLet me know if you would like to trace through an example of a schedule to see how these rules apply!",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "All factual claims made in the answer are directly supported by the provided context.",
+        "relevancy": 5,
+        "relevancy_reason": "The response directly and thoroughly answers the question about the differences between recoverable and cascadeless schedules.",
+        "completeness": 5,
+        "completeness_reason": "The answer covers all reference key points including the definition of recoverable schedules, cascading rollback, cascadeless schedules, and their logical relationship.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_2pl",
+        "question": "How does the two-phase locking protocol work?",
+        "answer": "Based on your course material, here is how the Two-Phase Locking (2PL) protocol works, explained step-by-step:\n\n### What is 2PL?\nThe Two-Phase Locking protocol is a locking protocol used by the concurrency control manager to ensure serializability (both conflict and view serializability) for transaction schedules (Source 1, Source 2, Source 5). \n\n### The Two Phases\nAs the name suggests, each transaction issues lock and unlock requests in two distinct phases (Source 2, Source 4):\n\n1. **Growing Phase (Acquiring locks):** \n   - During this phase, a transaction may obtain locks on data items.\n   - However, the transaction **may not release** any locks during this phase (Source 4).\n\n2. **Shrinking Phase (Releasing locks):**\n   - Once the transaction enters this phase, it may release locks.\n   - However, the transaction **may not obtain** any new locks once this phase has started (Source 1, Source 4).\n\nEach transaction must completely finish its growing phase before it can start its shrinking phase (Source 4). \n\n### Key Concepts\n* **Lock Point:** The lock point is the specific point in time where a transaction's shrinking phase starts (meaning it has acquired all the locks it needs and is about to release its first lock) (Source 1). The lock point is used to determine the serializability order of transactions (Source 1).\n\n***\n\nTo check your understanding: Think about why a transaction would *not* be allowed to acquire a new lock after it has already started releasing locks in the shrinking phase. How might that prevent the schedule from being serializable?",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the assistant's answer is directly supported by the provided retrieved context.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively addresses how the two-phase locking protocol works based on the context.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers the growing phase, shrinking phase, and conflict serializability, but omits the point regarding deadlocks and cascading rollbacks (which are not mentioned in the context anyway).",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_timestamp",
+        "question": "Explain the timestamp ordering protocol and Thomas write rule.",
+        "answer": "Based on your course material, here is an explanation of the Timestamp Ordering Protocol and the Thomas Write Rule:\n\n### 1. Timestamp Ordering Protocol (TSP)\n* **Core Concept:** A unique timestamp value is assigned to each transaction by the DBMS software when they arrive in the system [Source 4]. \n* **Serializability Order:** The serializability order is pre-defined based on these timestamps [Source 4]. The rule is that all conflicting operations must be executed in the exact same order as the transaction timestamp ordering [Source 1, Source 5]. \n* **Handling Out-of-Order Operations:** Under basic timestamp protocols, if an operation arrives out of order (violating the timestamp order), it causes the transaction to be rejected and rolled back [Source 5]. For instance, if a write operation comes in and its timestamp is less than the write timestamp of the data item ($\\text{TS}(T_i) < \\text{WTS}(Q)$), it is considered an \"obsolete write\" (writing an old value that has already been overwritten), and the transaction is rolled back [Source 1, Source 2, Source 3].\n\n### 2. Thomas Write Rule (TWR)\n* **Core Concept:** The Thomas Write Rule is a modification of the standard timestamp protocol that helps achieve view serializability [Source 1]. \n* **Difference from TSP:** While basic TSP rejects obsolete writes and rolls back the transaction, the Thomas Write Rule **allows obsolete writes by ignoring them instead of rolling back the transaction** [Source 1].\n* **How it works for Writes:** \n  * If a transaction $T_i$ attempts a $\\text{Write}(Q)$ and $\\text{TS}(T_i) < \\text{WTS}(Q)$, the write operation is **ignored** and there is **no rollback** [Source 1]. \n  * Otherwise, the write operation is allowed [Source 3].\n\nSources used:\n* Timestamp Protocol basics: [Source 4: Database management system (complete.pdf) | CONSERVATIVE] and [Source 5: Database management system (complete.pdf) | CONSERVATIVE]\n* Conflict ordering and rollbacks: [Source 1: Database management system (complete.pdf) | CONSERVATIVE], [Source 3: Database management system (complete.pdf) | CONSERVATIVE], and [Source 5: Database management system (complete.pdf) | CONSERVATIVE]\n* Thomas Write Rule specifics: [Source 1: Database management system (complete.pdf) | CONSERVATIVE] and [Source 2: Database management system (complete.pdf) | CONSERVATIVE]",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made by the assistant is directly supported by the retrieved context.",
+        "relevancy": 5,
+        "relevancy_reason": "The assistant directly and thoroughly explains both the timestamp ordering protocol and the Thomas write rule as requested.",
+        "completeness": 5,
+        "completeness_reason": "The answer successfully covers all the reference key points regarding timestamps, rollbacks, and the Thomas write rule.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_bplus_tree",
+        "question": "What is a B+ tree and how is it different from a B tree?",
+        "answer": "Based on your course material, here is a breakdown of what a B+ tree is and how it differs from a B tree:\n\n### Key Differences Between B Trees and B+ Trees\n\nAccording to your course materials, there are three major differences between a B tree and a B+ tree:\n\n1. **Key Availability:** In a B+ tree, all keys are available at the leaf node [Source 5]. \n2. **Pointers in Internal Nodes:** Internal nodes in a B+ tree do not contain record pointers (`Rp`), whereas B tree structures include them alongside block pointers and keys [Source 4, Source 5].\n3. **Leaf Node Contents:** In a B+ tree, the leaf node contains keys, record pointers, and only one block [Source 5]. Furthermore, the structure of an internal node and a leaf node are *different* in a B+ tree, whereas in a B tree, the internal nodes and leaf nodes share the same structure [Source 2].\n\nAdditionally, the course notes mention a procedural difference in how nodes split: the split of an internal node in a B tree is different from the split of a leaf node in a B+ tree [Source 1]. Finally, a B tree is noted as being more suitable for random access for some records, but not as ideal for range queries [Source 3].\n\n***\n\n**Study Hint to deepen your understanding:** Look closely at the formulas used to calculate the order ($P$) for B trees versus B+ trees in your notes [Source 2, Source 5]. How do the missing record pointers in B+ tree internal nodes change the block size inequality equation compared to a B tree?",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "All claims made in the answer are directly backed by the provided text.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively addresses what a B+ tree is and how it differs from a B tree using the provided material.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers most key points such as key and pointer placement differences, though range query efficiency could be highlighted more prominently.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_dense_sparse",
+        "question": "What is the difference between a dense index and a sparse index?",
+        "answer": "Based on your course material, here is a breakdown of the differences between dense and sparse index files:\n\n*   **Dense Index Files:** \n    *   An index entry is created for every single search key value in the database file (Source 1). \n    *   Because of this, the number of index entries equals the total number of database records (Source 1). \n    *   According to the course material, a dense index can be applied to both ordered and unordered files (Source 3).\n*   **Sparse Index Files:** \n    *   This type contains index records for only *some* search-key values, rather than every single one (Source 1). \n    *   Sparse indexes are applicable when the records are sequentially ordered (sorted) on the search key (Source 1).\n\nTo help you think about this further for your studies: consider how the storage size and the number of blocks accessed might differ between a dense index (where every record has an entry) and a sparse index (where only some do, such as one per database block). \n\nAccording to [Source 1: Database management system (complete).pdf | TRC :] and [Source 3: Database management system (complete).pdf | TRC :], those are the foundational definitions. For the rest, you may want to check your course materials on index blocks and block access calculations.",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "All factual claims made in the answer are directly supported by the provided context.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly addresses the difference between a dense index and a sparse index using the provided context.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers the key points about definitions and sorted requirements, missing only the explicit trade-off details about storage space and search speed.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_blocking_factor",
+        "question": "What is the blocking factor and how do you compute the number of blocks needed for a file?",
+        "answer": "Based on your course material, here is how the blocking factor and the number of blocks needed for a file are understood:\n\n### 1. What is the Blocking Factor?\nThe blocking factor (often denoted as blocking factor or bfr) refers to the number of records (or index entries) that can fit inside a single disk block. \n\n* **For a database file:** It is calculated by dividing the block size by the record size. *(Note: When calculating the blocking factor, you should take the floor value—meaning you round down to whole records).*\n  * *Example from context:* If a block size is 512 bytes and a record size is 150 bytes, the blocking factor is $\\lfloor 512 / 150 \\rfloor = 3$ records per block (Source 4).\n* **For an index file:** The blocking factor of an index file is calculated using the block size divided by the size of one index record. An index record size is made up of the size of the search key ($k$) plus the size of the block pointer ($p$), written as: $\\text{Index Record Size} = k + p$ (Source 1, Source 5).\n  * *Note from your material:* The blocking factor of an index file will generally be more than the blocking factor of a data file, but the total number of index blocks will be less than the total number of database file blocks (Source 1).\n\n### 2. How do you compute the number of blocks needed for a file?\nTo find the total number of blocks (frequently represented as $B$) required to store a file, you divide the total number of records by the blocking factor of that file.\n\n* *Example from context:* If you have 30,000 records and a blocking factor of 3 (from a block size of 512 and record size of 150), the number of data blocks is calculated as $30,000 / 3 = 10,000$ data blocks (Source 4). \n* If records are added such that the count changes (e.g., 30,002 records with a blocking factor of 3), it results in an extra block, yielding $10,001$ data blocks (Source 4).\n* For organizing a database file with fixed-length records, an unspanned organization is preferred (Source 2).\n\nSources used: [Source 1: Database management system (complete).pdf], [Source 2: Database management system (complete).pdf], [Source 3: Database management system (complete).pdf], [Source 4: Database management system (complete).pdf], [Source 5: Database management system (complete).pdf]. \n\nLet me know if you would like to walk through a practice calculation step by step!",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every factual claim, formula, and example provided in the answer is directly sourced and supported by the retrieved context.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and clearly addresses both parts of the question: what the blocking factor is and how to compute the number of blocks.",
+        "completeness": 5,
+        "completeness_reason": "The answer covers all reference key points including the blocking factor formula, the floor rule, the number of blocks computation, and unspanned organization.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_2nf",
+        "question": "What is second normal form and what is a partial dependency?",
+        "answer": "Hello! Let's break down Second Normal Form (2NF) and partial dependency using your course materials.\n\n### 1. What is a Partial Dependency?\nA functional dependency like $AB \\rightarrow C$ is a **partial dependency** if you can determine the right-hand side ($C$) by using only a proper subset of the left-hand side (L.H.S.). \n* In other words, if $A \\rightarrow C$ or $B \\rightarrow C$ holds true, then the original dependency $AB \\rightarrow C$ is a partial dependency because we can remove an attribute from the L.H.S. and still determine $C$ (Source 1, Source 2).\n\n### 2. What is Second Normal Form (2NF)?\nFor a relation schema $R$ to be in **2NF**, it must meet two conditions:\n1. $R$ must be in First Normal Form (1NF) (Source 1, Source 3).\n2. Every non-prime attribute 'A' in $R$ must be **fully functionally dependent** on the primary key of $R$ (Source 1, Source 3).\n\n**What is a Full Functional Dependency?**\nA dependency $AB \\rightarrow C$ is a *full* functional dependency if you *cannot* determine $C$ by removing any attribute from the L.H.S. (meaning neither $A \\rightarrow C$ nor $B \\rightarrow C$ holds) (Source 1). \n\n**What causes a violation of 2NF?**\nA violation occurs if you have a proper subset of a candidate key determining a non-key attribute (Source 1). For example, if your primary/candidate key is composite (like $AB$) and a non-key attribute is dependent on only part of that key (like $A \\rightarrow F$), that creates a partial dependency which violates 2NF (Source 1, Source 5).\n\n### Helpful Rules to Remember:\n* If a relation has a simple (single attribute) primary key, the relation is *always* in 2NF (Source 4).\n* If all attributes of a relation $R$ are key/prime attributes, $R$ is *always* in 2NF (Source 4). \n* Note that 2NF relations *can* have partial dependencies, but only under specific conditions where they do not create a problem (Source 4, Source 5).\n\n***\n\n**Sources Cited:**\n* Partial dependency definition and tests: *[Source 1: Database management system (complete).pdf | Full Dependency:]* and *[Source 2: Database management system (complete).pdf | Partial Dependency:]*\n* 2NF definition and violations: *[Source 1: Database management system (complete).pdf | Full Dependency:]* and *[Source 3: Database management system (complete).pdf | Every X Y must satisfy the following condition :]*\n* Additional rules for 2NF: *[Source 4: Database management system (complete).pdf | Full Dependency:]*",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "All factual claims made by the assistant are directly supported by the provided retrieved context.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and clearly explains both second normal form and partial dependency as requested.",
+        "completeness": 5,
+        "completeness_reason": "The assistant covers all the reference key points, including partial dependencies, 2NF definitions, and single-attribute key rules.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_minimal_cover",
+        "question": "How do you find the minimal cover of a set of functional dependencies?",
+        "answer": "Hello! I would be happy to help you understand how to find the minimal cover of a set of functional dependencies based on your course material. \n\nTo find a minimal cover (also known as a canonical cover or irreducible set), we follow a specific step-by-step procedure:\n\n### **Step-by-Step Procedure**\n\n1. **Step 1: Split the Functional Dependencies (FDs)**\n   * Ensure that the Right-Hand Side (RHS) of every FD contains only a single attribute. \n   * *Example:* If you have an FD like $X \\rightarrow YZ$, you split it into $X \\rightarrow Y$ and $X \\rightarrow Z$ [Source 2].\n\n2. **Step 2: Find and Delete Redundant Attributes on the Left-Hand Side (LHS)**\n   * Check if any attribute on the LHS can be removed without changing the closure of the set.\n   * *Example:* For an FD like $AB \\rightarrow C$:\n     * $A$ is extra if the attribute closure of $B$ (i.e., $[B]^+$) contains $A$ [Source 2].\n     * $B$ is extra if the attribute closure of $A$ (i.e., $[A]^+$) contains $B$ [Source 2].\n\n3. **Step 3: Find and Delete Redundant FDs**\n   * Check if any entire FD can be removed because it can be inferred from the remaining dependencies in the set.\n   * *Example:* Given the set $\\{A \\rightarrow B, B \\rightarrow C, A \\rightarrow C\\}$, the dependency $A \\rightarrow C$ is redundant because you can already reach $C$ through $A \\rightarrow B$ and $B \\rightarrow C$ [Source 3]. Removing $A \\rightarrow C$ leaves the minimal cover: $[A \\rightarrow B, B \\rightarrow C]$ [Source 3].\n\n---\n\n### **How to Check Your Work**\nTo verify whether your derived minimal cover ($G$) is correct compared to your original set of FDs ($F$), you must check that they are equivalent [Source 3]. This means testing two conditions:\n1. **$F$ covers $G$:** Write down all FDs of $G$, take their closure in $F$, and ensure $F$ covers all FDs of $G$ [Source 1].\n2. **$G$ covers $F$:** Write down all FDs of $F$, take their closure in $G$, and ensure $G$ covers all FDs of $F$ [Source 1].\n\n*Note:* A minimal cover may or may not be unique; sometimes a question can have multiple valid minimal covers [Source 4]. \n\n*(Sources used: [Source 1: Database management system (complete).pdf], [Source 2: Database management system (complete).pdf], [Source 3: Database management system (complete).pdf], [Source 4: Database management system (complete).pdf])*",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim in the answer is directly supported by the provided retrieved context.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively explains how to find the minimal cover of a set of functional dependencies.",
+        "completeness": 5,
+        "completeness_reason": "The answer covers all reference key points including splitting FDs, removing extraneous attributes, removing redundant FDs, and mentioning closures.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_participation",
+        "question": "What is the difference between total and partial participation in an ER diagram?",
+        "answer": "Based on your course material, here is the breakdown of the difference between total and partial participation in an ER diagram:\n\n*   **Total / Full Participation:** \n    *   **Definition:** It represents 100% participation, meaning *every* entity in the entity set must participate in a relationship set (Sources 1 & 3). \n    *   **Notation:** It is represented by a double line (Source 3).\n\n*   **Partial Participation:**\n    *   **Definition:** It means not 100% participation, meaning *not every* entity in the set participates in the relationship set (Source 3).\n    *   **Notation:** It is represented by a single line (Source 3).\n\nAccording to [Source 1: Database management system (complete).pdf | RDBMS], [Source 3: Database management system (complete).pdf | RDBMS], and [Source 4: Database management system (complete).pdf].",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the answer is directly supported by the retrieved context.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly addresses the difference between total and partial participation as requested by the question.",
+        "completeness": 5,
+        "completeness_reason": "The answer covers all reference key points including total participation definitions, partial participation definitions, and their notations.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_joins",
+        "question": "What is the difference between a natural join and an outer join?",
+        "answer": "Based on your course material, here is the breakdown of the differences between a natural join and an outer join:\n\n**1. Natural Join (An Inner Join Type)**\n* **Definition & Operation:** According to Source 2 and Source 3, a natural join is a type of inner join (derived operator) performed in three strict steps:\n  1. Take the cross (Cartesian) product of relations $R$ and $S$.\n  2. Select the tuples that satisfy the equality condition on all common attributes ($\\sigma$).\n  3. Project the distinct attributes ($\\pi$).\n* Formally: $R \\bowtie S = \\pi_{\\text{distinct attribute}} [\\sigma_{\\text{equality condition on all common attributes}} (R \\times S)]$ (Source 2).\n\n**2. Outer Join**\n* **Definition:** An outer join consists of the result of an inner (or natural) join *plus* any \"dangling tuples\" (tuples that failed to match or satisfy the join condition with the other relation) (Source 1 & Source 5).\n* **Why we need it:** In a standard inner or natural join, dangling tuples cause data loss because they fail to meet the join condition, meaning you do not receive the complete table data. Outer joins solve this by preserving those unmatched tuples (Source 1).\n* **Key Equation:** $\\text{Outer join} = \\text{Natural join} + \\text{dangling tuple}$ (or $\\text{Inner join} + \\text{dangling tuple}$) (Source 1).\n* **Types of Outer Joins:** \n  * Left outer join ($\\$ / $\\bowtie_L$)\n  * Right outer join ($\\$ / $\\bowtie_R$)\n  * Full outer join ($\\$ / $\\bowtie$) \n  (Source 1)\n\n***\n\nTo check your understanding: Think about what would happen to a row in an employee table if they didn't match any department ID in a department table. How would a natural join treat that row differently compared to a left outer join?",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the assistant's answer is directly supported by the provided text.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively compares natural join and outer join using the retrieved material.",
+        "completeness": 5,
+        "completeness_reason": "The answer covers all reference key points including how natural join works, how outer join retains unmatched tuples (dangling tuples), and the different types of outer joins.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_group_by_having",
+        "question": "How do GROUP BY and HAVING work in SQL, and how is HAVING different from WHERE?",
+        "answer": "Hello! I'd be happy to help you understand how these SQL clauses work together. \n\nBased on your course material, here is the breakdown of the clauses and their execution order:\n\n*   **WHERE**: This is the second executable clause in a query. It selects tuples based on a specified condition [Source 1].\n*   **GROUP BY**: This is the third executable clause (if used). It groups the table based on specified attributes [Source 1].\n*   **HAVING**: This is the fourth executable clause, and it is used to select groups that satisfy a specific condition [Source 1]. The material notes that the `HAVING` clause is always preceded by the `GROUP BY` clause [Source 1].\n\n### Key Differences Between WHERE and HAVING\n*   **Phase of Execution:** `WHERE` executes earlier in the query process (as the second executable clause) to filter individual tuples/rows, whereas `HAVING` executes later (as the fourth executable clause) to filter groups created by `GROUP BY`.\n*   **Target:** `WHERE` evaluates conditions on individual rows, while `HAVING` evaluates conditions on groups (often using aggregate functions like `min()`).\n\n### Important Note on Standards\nDepending on the context, there is a technical distinction regarding `HAVING`:\n*   **SQL Standard (1992) / GATE exams:** `HAVING` must always be used alongside a `GROUP BY` clause [Source 1]. \n*   **Latest DBMS Software:** `HAVING` can actually be used without a `GROUP BY` clause [Source 1].\n\nTo help guide your thinking: if you were trying to find students with a certain passing grade *before* grouping them by their branch, which clause do you think should handle that filter, and which one would you use if you wanted to filter based on the *minimum* marks of an entire branch?",
+        "retrieval_hit": true,
+        "num_chunks": 1,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the assistant's answer is directly supported by the provided context.",
+        "relevancy": 5,
+        "relevancy_reason": "The assistant fully answers how GROUP BY and HAVING work, and how HAVING differs from WHERE based on the context.",
+        "completeness": 5,
+        "completeness_reason": "The assistant covers all the reference key points regarding GROUP BY, HAVING, and the differences involving WHERE.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_view_serializability",
+        "question": "What is view serializability and how is it different from conflict serializability?",
+        "answer": "Based on your course materials, here is a breakdown of view serializability and how it relates to conflict serializability:\n\n### 1. Conflict Serializability\n* **Definition & Characteristics:** It is a stricter condition for serializability with a polynomial time complexity, making it very easy to implement practically (Source 1). \n* **Rule:** If a schedule is conflict serializable, it is also automatically view serializable (Source 3, Source 5). \n\n### 2. View Serializability\n* **Definition & Characteristics:** It is a less strict condition for serializability compared to conflict serializability (Source 1). However, it is NP-complete with an exponential time complexity, which makes it hard to implement in practice (Source 1, Source 2).\n* **Core Conditions:** For a schedule to be view serializable, three conditions must be satisfied for each data item (Source 5):\n  1. Initial read\n  2. Final write\n  3. Updated read (write-read sequence) (Source 5)\n\n### 3. The Relationship and Differences\n* **The Hierarchy:** Every conflict serializable schedule is already view serializable. However, if a schedule is view serializable, it *may or may not* be conflict serializable (Source 3, Source 4). \n* **The \"Blind Writes\" Exception:** If a schedule is **not** conflict serializable, but *is* view serializable, there must be \"blind writes\" present (Source 2, Source 4). If there are no blind writes, a schedule that is view serializable will also be conflict serializable (Source 2).\n* **Practical Implementation:** Theoretically, a schedule is considered serializable if it is conflict serializable, view serializable, or both (Source 1, Source 4). However, because general implementation of *only* serializability is not possible, database management systems practically implement serializability using **conflict serializability** due to its lower time complexity (Source 1).",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made in the assistant's answer is directly supported by the provided context sources.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively addresses what view serializability is and how it differs from conflict serializability.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers most of the reference key points including the relationship between the two, blind writes, and strictness, though it omits an explicit detailed definition of view equivalence.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_strict_2pl",
+        "question": "What is strict two-phase locking and why is it used instead of basic 2PL?",
+        "answer": "Based on your course material, here is a breakdown of Strict Two-Phase Locking (Strict 2PL) and how it compares to basic 2PL:\n\n### What is Strict 2PL?\nStrict 2PL is a variation of the Two-Phase Locking protocol. Under Strict 2PL, **all exclusive locks (X-locks) taken by a transaction are held until the transaction explicitly commits or rolls back** (Source 3). \n\nTo visualize this using the timeline format from your notes: unlike basic 2PL—where a transaction can begin releasing its acquired locks as soon as its shrinking phase starts (Source 1)—Strict 2PL forces the transaction to hold onto its exclusive locks until the very end at the Commit or Rollback ($C|R$) stage (Source 3).\n\n### Why is it used instead of basic 2PL?\nWhile basic 2PL ensures conflict serializability (Source 1), Strict 2PL adds crucial guarantees regarding transaction safety:\n1. **Ensures recoverability:** By holding exclusive locks until the transaction finishes, it prevents other transactions from reading uncommitted changes prematurely.\n2. **Avoids cascading rollbacks:** If a transaction fails, holding the exclusive locks until commit/rollback ensures that other transactions haven't built their operations on top of dirty (uncommitted) data, preventing a domino effect of rollbacks (Source 3).\n\n***\n\nAccording to [Source 3: Database management system (complete).pdf | 1.1 Strict 2PL], Strict 2PL means \"All exclusive lock [X-lock] taken by transaction will be released only after commit or rollback. (this ensures recoverability and avoids cascading rollbacks).\" \n\nAccording to [Source 1: Database management system (complete).pdf], basic 2PL ensures conflict/view serializability where unlocking starts as soon as the shrinking phase begins, but Strict 2PL builds on this by extending when those exclusive locks are released. \n\nFor the rest of the variations (like Rigorous 2PL or Conservative 2PL), you may want to check the sections on advanced 2PL protocols in your course material (Sources 2 and 3).",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made about Strict 2PL and its comparison to basic 2PL is directly supported by the provided context sources.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and clearly explains what Strict 2PL is and why it is used instead of basic 2PL.",
+        "completeness": 3,
+        "completeness_reason": "The answer covers holding exclusive locks until commit/abort and preventing cascading rollbacks, but misses the distinction with Rigorous 2PL holding all locks (shared and exclusive).",
+        "unsupported_claims": []
+      },
+      {
+        "id": "dbms_deadlock_prevention",
+        "question": "How do wait-die and wound-wait schemes prevent deadlock?",
+        "answer": "Based on your course material, here is how the wait-die and wound-wait schemes operate to handle transaction conflicts (which helps prevent deadlocks):\n\nFirst, to understand these schemes, you need to know how timestamps work with transaction ages. In timestamp-based approaches, a larger timestamp means a younger transaction, and a smaller timestamp means an older transaction (\"older wound the younger transaction\") [Source 2]. \n\nHere is how each scheme handles a situation where transaction $T_i$ requests a data item (or lock) that is currently being held by transaction $T_j$:\n\n### 1. Wait-Die Scheme (Non-preemptive)\n* **The Rule:** $T_i$ is allowed to wait for $T_j$ only if $T_i$ has a larger timestamp than $T_j$ (meaning $T_i$ is younger than $T_j$). Otherwise, if $T_i$ has a smaller timestamp than $T_j$ (meaning $T_i$ is older), $T_i$ will \"die\" (rollback).\n* **Step-by-step logic:** If an older transaction requests a lock held by a younger one, the older transaction dies. If a younger transaction requests a lock held by an older one, the younger transaction is allowed to wait [Source 2].\n\n### 2. Wound-Wait Scheme\n* **The Rule:** If $T_i$ requests a data item held by $T_j$, $T_i$ is allowed to wait *only* if its timestamp is larger than that of $T_j$ (meaning $T_i$ is younger than $T_j$). Otherwise, $T_j$ is rolled back ($T_j$ is \"wounded\" or aborted by $T_i$) [Source 2].\n* **Step-by-step logic:** Here, an older transaction ($T_i$) will \"wound\" (force a rollback of) the younger transaction ($T_j$) that is holding the item it wants. Conversely, a younger transaction requesting an item held by an older transaction is made to wait [Source 2].\n\nAccording to [Source 1: Database management system (complete).pdf | CONSERVATIVE], both **wait-die** and **wound-wait** are listed as approaches for deadlock prevention. \n\nFor the rest of the implementation details or edge cases regarding how these timestamps are generated and managed, you may want to check your chapter on **Timestamp-based Protocols and Deadlock Prevention**.",
+        "retrieval_hit": true,
+        "num_chunks": 3,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim made by the assistant is directly derived and supported by the provided text.",
+        "relevancy": 5,
+        "relevancy_reason": "The assistant directly and thoroughly explains how both wait-die and wound-wait schemes prevent deadlock.",
+        "completeness": 5,
+        "completeness_reason": "The assistant covers transaction timestamps, wait-die mechanics, and wound-wait mechanics accurately matching all reference key points.",
+        "unsupported_claims": []
+      },
+      {
+        "id": "algo_merge_vs_quick",
+        "question": "Compare merge sort and quick sort in terms of time complexity and space.",
+        "answer": "Based on your course material, here is a comparison of Merge Sort and Quick Sort regarding their time and space complexity:\n\n### Time Complexity\n\n*   **Merge Sort:** \n    *   It has a time complexity of **$O(n \\log n)$ in all cases** (best, average, and worst). \n    *   *Why?* The array is always divided in half (resulting in $\\log n$ levels) and merging takes $O(n)$ time at each level (Source 5).\n*   **Quick Sort:** \n    *   **Best case:** $O(n \\log n)$ when the pivot divides the array into roughly equal halves (Source 1).\n    *   **Average case:** $O(n \\log n)$ with random pivot selection (Source 1).\n    *   **Worst case:** $O(n^2)$ when the pivot is always the smallest or largest element, such as with already sorted input using the first element as the pivot (Source 1).\n\n### Space Complexity\n\n*   **Merge Sort:** \n    *   It requires **$O(n)$ additional space** for temporary arrays during the merging process. Because of this extra space requirement, merge sort is **not** an in-place algorithm (Source 4).\n*   **Quick Sort:** \n    *   It requires **$O(\\log n)$ space** for the recursive call stack. Quick sort is an **in-place algorithm** because it does not need extra arrays for the data, which is a significant advantage over merge sort (Source 1). \n\n*(Source 1: algorithms_notes.md | Time Complexity; Source 4: algorithms_notes.md | 1.2 Merge Sort; Source 5: algorithms_notes.md | 1.2 Merge Sort)*",
+        "retrieval_hit": true,
+        "num_chunks": 5,
+        "faithfulness": 5,
+        "faithfulness_reason": "Every claim in the assistant's answer is directly supported by the provided context sources.",
+        "relevancy": 5,
+        "relevancy_reason": "The answer directly and comprehensively addresses the prompt by comparing merge sort and quick sort regarding time complexity and space.",
+        "completeness": 4,
+        "completeness_reason": "The answer covers time complexity for both, space complexity for both, and quick sort's worst case, but omits stability details which were part of the reference key points.",
+        "unsupported_claims": []
+      }
+    ],
+    "summary": {
+      "mode": "rerank",
+      "num_cases": 25,
+      "num_scored": 25,
+      "num_failed": 0,
+      "faithfulness": 4.92,
+      "relevancy": 4.92,
+      "completeness": 4.2
+    }
+  }
+}

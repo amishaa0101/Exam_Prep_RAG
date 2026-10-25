@@ -1,4 +1,8 @@
-sentence-transformers
+sentence-transformers  # embeddings (bi-encoder) and re-ranking (CrossEncoder)
 chromadb
 PyMuPDF
 numpy
+google-generativeai
+python-dotenv
+streamlit
+pytest

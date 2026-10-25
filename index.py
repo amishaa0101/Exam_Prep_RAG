@@ -22,7 +22,8 @@ from chunker import chunk_all_documents
 from vector_store import VectorStore
 
 
-def build_index(data_dir="./data", chunk_size=500, overlap=50, collection_name="course_material"):
+def build_index(data_dir="./data", chunk_size=500, overlap=50, collection_name="course_material",
+                skip_confirm=False):
     """
     Complete indexing pipeline.
 
@@ -31,7 +32,11 @@ def build_index(data_dir="./data", chunk_size=500, overlap=50, collection_name="
         chunk_size: Target chunk size in characters (tune this!)
         overlap: Character overlap between consecutive chunks
         collection_name: Name for the ChromaDB collection
+        skip_confirm: Don't pause for the chunk inspection prompt
     """
+    if overlap >= chunk_size:
+        print(f"--overlap ({overlap}) must be smaller than --chunk-size ({chunk_size})")
+        return None
 
     # ---- Step 1: Load Documents ----
     print("=" * 60)
@@ -82,14 +87,13 @@ def build_index(data_dir="./data", chunk_size=500, overlap=50, collection_name="
     print(f"\n{'- ' * 30}")
     print(f"\nTotal chunks to index: {len(chunks)}")
 
-    # Pause for inspection (remove in production)
-    try:
-        response = input(
-            "\nLook good? Press Enter to index, or Ctrl+C to abort: "
-        )
-    except KeyboardInterrupt:
-        print("\n\nAborted. Adjust chunk_size/overlap and retry.")
-        return None
+    # Pause for inspection (skip with --yes for scripted runs)
+    if not skip_confirm:
+        try:
+            input("\nLook good? Press Enter to index, or Ctrl+C to abort: ")
+        except (KeyboardInterrupt, EOFError):
+            print("\n\nAborted. Adjust chunk_size/overlap and retry.")
+            return None
 
     # ---- Step 4: Embed and Store ----
     print("\n" + "=" * 60)
@@ -130,7 +134,8 @@ if __name__ == "__main__":
     parser.add_argument("data_dir", nargs="?", default="./data", help="Directory containing documents (default: ./data)")
     parser.add_argument("--chunk-size", type=int, default=500, help="Target chunk size in characters (default: 500)")
     parser.add_argument("--overlap", type=int, default=50, help="Overlap between chunks in characters (default: 50)")
+    parser.add_argument("--yes", action="store_true", help="Skip the chunk inspection pause")
     parser.add_argument("--collection", default="course_material", help="ChromaDB collection name (default: course_material)")
 
     args = parser.parse_args()
-    build_index(args.data_dir, args.chunk_size, args.overlap, args.collection)
+    build_index(args.data_dir, args.chunk_size, args.overlap, args.collection, skip_confirm=args.yes)

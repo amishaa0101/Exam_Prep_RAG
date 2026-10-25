@@ -12,12 +12,18 @@ Commands during interactive session:
     mode basic     -- switch to basic retrieval
     mode context   -- switch to context-enriched retrieval
     mode adaptive  -- switch to adaptive retrieval
+    mode rerank    -- switch to cross-encoder re-ranking
     level beginner/intermediate/advanced  -- set student level (adaptive mode)
     stats          -- show index statistics
     help           -- show available commands
 """
 
 import argparse
+import sys
+
+# Section names contain symbols ("⋈") that crash print() on the Windows cp1252 console
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
 from vector_store import VectorStore
 from retriever import Retriever
 
@@ -86,7 +92,7 @@ def interactive_query(mode="basic", k=5):
         elif lower == "help":
             print("\n  Commands:")
             print("    quit/exit                  -- stop")
-            print("    mode basic/context/adaptive -- switch retrieval mode")
+            print("    mode basic/context/adaptive/rerank -- switch retrieval mode")
             print("    level beginner/intermediate/advanced -- set student level")
             print("    stats                      -- show index statistics")
             print("    k <number>                 -- set number of results")
@@ -96,11 +102,11 @@ def interactive_query(mode="basic", k=5):
 
         elif lower.startswith("mode "):
             new_mode = lower.split(" ", 1)[1].strip()
-            if new_mode in ("basic", "context", "adaptive"):
+            if new_mode in ("basic", "context", "adaptive", "rerank"):
                 current_mode = new_mode
                 print(f"  Switched to {current_mode} mode")
             else:
-                print("  Modes: basic, context, adaptive")
+                print("  Modes: basic, context, adaptive, rerank")
             continue
 
         elif lower.startswith("level "):
@@ -138,6 +144,9 @@ def interactive_query(mode="basic", k=5):
                 query, student_level=student_level, k=k
             )
 
+        elif current_mode == "rerank":
+            results = retriever.retrieve_with_reranking(query, k=k)
+
         print_results(results)
 
         # Also show the formatted context string (what the LLM would see)
@@ -150,7 +159,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Interactive retrieval testing")
     parser.add_argument(
         "--mode",
-        choices=["basic", "context", "adaptive"],
+        choices=["basic", "context", "adaptive", "rerank"],
         default="basic",
         help="Retrieval mode (default: basic)",
     )

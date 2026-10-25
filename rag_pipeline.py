@@ -13,10 +13,15 @@ Supports: Google Gemini (free) and OpenAI GPT (paid)
 """
 
 import os
+import sys
 from retriever import Retriever
 from vector_store import VectorStore
 from dotenv import load_dotenv
 load_dotenv()
+
+# DBMS notes contain symbols like "⋈" that crash print() on the Windows cp1252 console
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
 
 # ============================================================
 # SYSTEM PROMPT TEMPLATE
@@ -136,8 +141,9 @@ class LLMClient:
             full_prompt,
             generation_config=genai.types.GenerationConfig(
                 temperature=temperature,
-                max_output_tokens=1500,
+                max_output_tokens=2500,
             ),
+            request_options={"timeout": 120},  # don't hang forever on a stuck request
         )
 
         return response.text
@@ -151,7 +157,7 @@ class LLMClient:
             model=self.model_name,
             messages=openai_messages,
             temperature=temperature,
-            max_tokens=1500,
+            max_tokens=2500,
         )
 
         return response.choices[0].message.content
@@ -201,6 +207,11 @@ class RAGPipeline:
         self.max_history_turns = 6  # keep last 6 exchanges (sliding window)
         self.num_chunks = 5         # retrieve top 5 chunks
         self.temperature = 0.2      # low temp for faithfulness
+        # Rerank and adaptive modes: chunks the cross-encoder scores below this are dropped.
+        # On the eval set every answerable question's top chunk scored >= 0.79 and every
+        # out-of-scope question's top chunk scored < 0.001, so 0.05 sits in a wide gap.
+        # If nothing passes, the question is refused without calling the LLM.
+        self.min_rerank_score = 0.05
 
         print("-" * 40)
         print(f"Pipeline ready! Index has {self.store.collection.count()} chunks.")
@@ -220,19 +231,8 @@ class RAGPipeline:
         self.conversation_history = []
         print("Conversation history cleared.")
 
-    def ask(self, question, topic=None, mode="adaptive"):
-        """
-        Ask a question and get a RAG-grounded answer.
-
-        Args:
-            question: The student's question
-            topic: Optional topic filter for retrieval
-            mode: "basic", "context", or "adaptive"
-
-        Returns:
-            The generated answer string
-        """
-        # ---- Step 1: Retrieve relevant chunks ----
+    def retrieve(self, question, topic=None, mode="adaptive"):
+        """Run the retrieval step for the given mode and return the chunks."""
         if mode == "adaptive":
             results = self.retriever.retrieve_adaptive(
                 question,
@@ -240,19 +240,54 @@ class RAGPipeline:
                 topic=topic,
                 k=self.num_chunks,
             )
+            # Adaptive is built on the cross-encoder, so the same relevance guard applies
+            return [r for r in results if r["score"] >= self.min_rerank_score]
         elif mode == "context":
-            results = self.retriever.retrieve_with_context(
+            return self.retriever.retrieve_with_context(
                 question, k=min(self.num_chunks, 3)
             )
-        else:
-            results = self.retriever.retrieve(question, k=self.num_chunks)
+        elif mode == "rerank":
+            results = self.retriever.retrieve_with_reranking(question, k=self.num_chunks)
+            return [r for r in results if r["score"] >= self.min_rerank_score]
+        return self.retriever.retrieve(question, k=self.num_chunks)
+
+    def ask(self, question, topic=None, mode="adaptive"):
+        """
+        Ask a question and get a RAG-grounded answer.
+
+        Args:
+            question: The student's question
+            topic: Optional topic filter for retrieval
+            mode: "basic", "context", "adaptive" or "rerank"
+
+        Returns:
+            The generated answer string
+        """
+        return self.ask_with_sources(question, topic=topic, mode=mode)["answer"]
+
+    def ask_with_sources(self, question, topic=None, mode="adaptive", use_history=True):
+        """
+        Same as ask(), but also returns what was retrieved.
+        Used by the evaluation (faithfulness needs the context) and the UI (sources panel).
+
+        Args:
+            use_history: If False, the question is answered without (and does not
+                         update) conversation history. Evaluation uses this so
+                         test cases don't leak into each other.
+
+        Returns:
+            Dict with "answer", "results" (retrieved chunks) and "context" (prompt text)
+        """
+        # ---- Step 1: Retrieve relevant chunks ----
+        results = self.retrieve(question, topic=topic, mode=mode)
 
         # ---- Step 2: Format context for the prompt ----
         context = self.retriever.format_context(results)
 
         if not context.strip():
-            return ("I couldn't find any relevant information in your course material "
-                    "for this question. Could you rephrase it or ask about a specific topic?")
+            answer = ("I couldn't find any relevant information in your course material "
+                      "for this question. Could you rephrase it or ask about a specific topic?")
+            return {"answer": answer, "results": results, "context": context}
 
         # ---- Step 3: Build the system prompt ----
         system_prompt = SYSTEM_PROMPT.format(
@@ -261,7 +296,7 @@ class RAGPipeline:
         )
 
         # ---- Step 4: Build messages with conversation history ----
-        messages = list(self.conversation_history)  # copy
+        messages = list(self.conversation_history) if use_history else []
         messages.append({"role": "user", "content": question})
 
         # ---- Step 5: Generate answer ----
@@ -272,18 +307,20 @@ class RAGPipeline:
                 temperature=self.temperature,
             )
         except Exception as e:
-            return f"Error generating response: {e}"
+            answer = f"Error generating response: {e}"
+            return {"answer": answer, "results": results, "context": context}
 
         # ---- Step 6: Update conversation history ----
-        self.conversation_history.append({"role": "user", "content": question})
-        self.conversation_history.append({"role": "assistant", "content": answer})
+        if use_history:
+            self.conversation_history.append({"role": "user", "content": question})
+            self.conversation_history.append({"role": "assistant", "content": answer})
 
-        # Trim history if too long (sliding window - Lesson 2)
-        if len(self.conversation_history) > self.max_history_turns * 2:
-            self.conversation_history = self.conversation_history[-(self.max_history_turns * 2):]
+            # Trim history if too long (sliding window - Lesson 2)
+            if len(self.conversation_history) > self.max_history_turns * 2:
+                self.conversation_history = self.conversation_history[-(self.max_history_turns * 2):]
 
         # ---- Step 7: Return answer with metadata ----
-        return answer
+        return {"answer": answer, "results": results, "context": context}
 
     def ask_verbose(self, question, topic=None, mode="adaptive"):
         """
@@ -295,14 +332,8 @@ class RAGPipeline:
         print(f"Mode: {mode} | Level: {self.student_level}")
         print(f"{'=' * 60}")
 
-        # Retrieve
-        if mode == "adaptive":
-            results = self.retriever.retrieve_adaptive(
-                question, student_level=self.student_level,
-                topic=topic, k=self.num_chunks,
-            )
-        else:
-            results = self.retriever.retrieve(question, k=self.num_chunks)
+        # Retrieve (same path as ask(), so "context" mode works here too)
+        results = self.retrieve(question, topic=topic, mode=mode)
 
         # Show retrieval results
         print(f"\nRetrieved {len(results)} chunks:")
@@ -345,10 +376,10 @@ class RAGPipeline:
 # INTERACTIVE SESSION
 # ============================================================
 
-def interactive_session(provider="gemini", api_key=None):
+def interactive_session(provider="gemini", api_key=None, model=None):
     """Run an interactive RAG-powered study session."""
 
-    rag = RAGPipeline(provider=provider, api_key=api_key)
+    rag = RAGPipeline(provider=provider, api_key=api_key, model=model)
 
     print("\nStudy Assistant Ready!")
     print("Commands: 'quit', 'level <beginner/intermediate/advanced>',")
@@ -413,4 +444,4 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    interactive_session(provider=args.provider, api_key=args.api_key)
+    interactive_session(provider=args.provider, api_key=args.api_key, model=args.model)

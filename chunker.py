@@ -39,13 +39,23 @@ def extract_sections(text):
         if re.match(r"^Chapter\s+\d+", stripped, re.IGNORECASE):
             return True
 
+        # Timestamps from the note-taking app ("6:29 PM") are never headers
+        if re.match(r"^\d{1,2}:\d{2}\s*[AP]M$", stripped):
+            return False
+
         # ALL CAPS headers (common in GATE notes): "NORMALIZATION", "ER MODEL"
+        # Must be mostly letters with a real word in it, otherwise formulas like
+        # "A = 1100", "W(A) - W(B)" or "[BC, BCD]" get picked up (isupper() is True for them)
         if (stripped.isupper() and len(stripped) > 4 and len(stripped) < 80
                 and not stripped.startswith("-")):
-            return True
+            non_space = stripped.replace(" ", "")
+            alpha_ratio = sum(c.isalpha() for c in non_space) / len(non_space)
+            if alpha_ratio >= 0.8 and re.search(r"[A-Z]{4,}", stripped):
+                return True
 
         # Numbered section with title: "1.1 Entity Set" or "3.1. Attribute types"
-        if re.match(r"^\d+(\.\d+)*\.?\s+[A-Z].{3,}", stripped):
+        # Requires a sub-section number so list items like "2. Repeat V-1 times:" don't count
+        if re.match(r"^\d+(\.\d+)+\.?\s+[A-Z].{3,}", stripped):
             if len(stripped) < 100:
                 return True
 
@@ -81,11 +91,64 @@ def extract_sections(text):
     return sections
 
 
+# ============================================================
+# DIFFICULTY TAGGING (powers adaptive retrieval)
+# Rule-based on purpose: free, instant, and every decision can be explained.
+#   basic signals:    definition language ("is called", "types of", "why we use")
+#   advanced signals: worked problems ("Q.", "sol.", "how many", "maximum"),
+#                     formula/symbol density, digits, little plain prose
+# Thresholds were set from the score distribution of the course notes:
+# roughly the bottom quarter is "basic" and the top quarter "advanced".
+# ============================================================
+
+DEFINITION_CUES = re.compile(
+    r"\b(is|are) (a|an|the|called|defined)\b|\bmeans\b|\bdefin|\bcalled\b|\btypes? of\b"
+    r"|\bintroduction\b|\bwhy (do )?(we )?(need|use)\b|\bused to\b|\bpurpose\b|\boverview\b",
+    re.IGNORECASE,
+)
+PROBLEM_CUES = re.compile(
+    r"(^|\n)\s*(q\s*\.|q\(|que\b|sol\.|solution|practice|example|ex\s*[:.])"
+    r"|\bhow many\b|\bmaximum\b|\bminimum\b|\bnumber of\b|\bcalculate\b|\bfind the\b",
+    re.IGNORECASE,
+)
+FORMULA_SYMBOLS = set("=+[]{}()∪∩⋈σπ≤≥<>∃∀∈|÷×^")
+BASIC_BELOW = 1.2
+ADVANCED_ABOVE = 5.5
+
+
+def difficulty_score(text):
+    """Higher = more problem-solving / formula heavy, lower = more definitional."""
+    body = text.split("\n\n", 1)[-1]  # ignore the prepended section header
+    n = max(len(body), 1)
+    symbol_density = sum(c in FORMULA_SYMBOLS for c in body) / n
+    digit_density = sum(c.isdigit() for c in body) / n
+    tokens = body.split()
+    prose_ratio = len(re.findall(r"[A-Za-z]{3,}", body)) / max(len(tokens), 1)
+
+    advanced = 1.5 * len(PROBLEM_CUES.findall(body)) + 25 * symbol_density + 25 * digit_density + 2 * (1 - prose_ratio)
+    basic = 1.5 * len(DEFINITION_CUES.findall(body))
+    return round(advanced - basic, 2)
+
+
+def estimate_difficulty(text):
+    """Map the score to the three levels used by adaptive retrieval."""
+    score = difficulty_score(text)
+    if score < BASIC_BELOW:
+        return "basic", score
+    if score > ADVANCED_ABOVE:
+        return "advanced", score
+    return "intermediate", score
+
+
 def recursive_chunk(text, chunk_size=500, overlap=50):
     """
     Split text using recursive character splitting.
     Tries natural boundaries in order: paragraphs > lines > sentences > words.
     """
+    if overlap >= chunk_size:
+        # The hard-split fallback would never advance and loop forever
+        raise ValueError(f"overlap ({overlap}) must be smaller than chunk_size ({chunk_size})")
+
     if len(text) <= chunk_size:
         return [text]
 
@@ -164,6 +227,7 @@ def chunk_document(document, chunk_size=500, overlap=50):
                 continue  # less than 30% alphabetic = probably garbage
 
             chunk_text = f"{header}\n\n{sub_chunk}"
+            difficulty, score = estimate_difficulty(chunk_text)
 
             all_chunks.append(
                 {
@@ -174,6 +238,8 @@ def chunk_document(document, chunk_size=500, overlap=50):
                         "section": header,
                         "chunk_index": chunk_id,
                         "char_count": len(chunk_text),
+                        "difficulty": difficulty,
+                        "difficulty_score": score,
                     },
                 }
             )
@@ -190,29 +256,26 @@ def chunk_question_paper(document, source_year="unknown"):
     text = document["text"]
     source = document["source"]
 
-    question_pattern = r"(?:Q(?:uestion)?\.?\s*(\d+)|(\d+)\s*[\.\)]\s)"
-    parts = re.split(question_pattern, text)
+    # A question starts at the beginning of a line: "Q1.", "Question 3", "4)" or "5."
+    # Anchoring to line start keeps "Step 2." inside an answer from starting a new question
+    question_pattern = re.compile(r"(?m)^\s*(?:Q(?:uestion)?\.?\s*(\d+)|(\d+)[\.\)])\s*[\.:\)]?\s*")
+    markers = list(question_pattern.finditer(text))
 
     chunks = []
     chunk_id = 0
 
-    i = 0
-    while i < len(parts):
-        if parts[i] is None:
-            i += 1
-            continue
+    for n, match in enumerate(markers):
+        q_num = match.group(1) or match.group(2)
+        end = markers[n + 1].start() if n + 1 < len(markers) else len(text)
+        content = text[match.end():end].strip()
 
-        q_num = None
-        if i + 1 < len(parts) and parts[i + 1] and parts[i + 1].strip().isdigit():
-            q_num = parts[i + 1].strip()
-
-        content = parts[i].strip()
         if len(content) > 50:
-            header = f"Question {q_num}" if q_num else f"Question {chunk_id + 1}"
+            header = f"Question {q_num}"
 
             chunks.append(
                 {
-                    "id": f"{source}_q_{chunk_id}",
+                    # Same "_chunk_" ID scheme as chunk_document so context mode can find neighbours
+                    "id": f"{source}_chunk_{chunk_id}",
                     "text": f"{header}\n\n{content}",
                     "metadata": {
                         "source": source,
@@ -221,11 +284,13 @@ def chunk_question_paper(document, source_year="unknown"):
                         "char_count": len(content),
                         "content_type": "question_paper",
                         "year": source_year,
+                        # Past-paper questions are exam problems by definition
+                        "difficulty": "advanced",
+                        "difficulty_score": difficulty_score(content),
                     },
                 }
             )
             chunk_id += 1
-        i += 1
 
     if len(chunks) < 2:
         return chunk_document(document)
@@ -240,7 +305,8 @@ def chunk_all_documents(documents, chunk_size=500, overlap=50):
     for doc in documents:
         source = doc["source"].lower()
 
-        if any(kw in source for kw in ["paper", "exam", "quiz", "test", "pyq"]):
+        # Match whole filename words, so "latest_notes.md" isn't treated as a "test" paper
+        if re.search(r"(^|[^a-z])(paper|exam|quiz|test|pyq)s?([^a-z]|$)", source):
             chunks = chunk_question_paper(doc)
             print(f"  {doc['source']}: {len(chunks)} chunks (question paper mode)")
         else:

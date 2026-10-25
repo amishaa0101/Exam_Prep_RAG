@@ -21,16 +21,21 @@ def clean_pdf_text(text):
     """
     # Remove page number patterns
     text = re.sub(r"(?i)\b(main\s+)?notes?\s*page\s*\d+\b", "", text)
-    text = re.sub(r"\n\s*-?\s*\d+\s*-?\s*\n", "\n", text)  # standalone page numbers
+    # Standalone page numbers. (?m) with ^...$ so back-to-back number lines are all removed;
+    # matching the surrounding "\n"s instead used to skip every other line.
+    text = re.sub(r"(?m)^\s*-?\s*\d+\s*-?\s*$", "", text)
+    # Note-taking app timestamps ("6:29 PM") that otherwise end up as section headers
+    text = re.sub(r"(?m)^\s*\d{1,2}:\d{2}\s*[AP]M\s*$", "", text)
 
-    # Remove lines that are just isolated single characters or short gibberish
+    # Remove lines that are just isolated single characters (diagram artifacts).
+    # Two-character lines are kept: in DBMS notes they are often meaningful ("R1", "AB").
     lines = text.split("\n")
     cleaned_lines = []
     for line in lines:
         stripped = line.strip()
         if not stripped:
             cleaned_lines.append("")
-        elif len(stripped) <= 2 and not stripped[0].isdigit():
+        elif len(stripped) == 1 and not stripped.isdigit():
             continue
         elif re.match(r"^[A-Z]\(\d+\)$", stripped):
             continue  # skip "E(1)", "E(2)" etc.
@@ -63,9 +68,9 @@ def load_pdf(filepath):
     Load a PDF file using PyMuPDF (fitz).
     Extracts text from each page and combines into a single document.
     """
-    import fitz  # PyMuPDF
+    import pymupdf  # PyMuPDF (the old "fitz" import name is deprecated)
 
-    doc = fitz.open(filepath)
+    doc = pymupdf.open(filepath)
     pages = []
     for page_num, page in enumerate(doc):
         text = page.get_text()

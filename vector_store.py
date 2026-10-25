@@ -86,10 +86,15 @@ class VectorStore:
         Returns:
             List of dicts with id, text, score (cosine similarity), metadata
         """
+        # ChromaDB raises on n_results=0, which happens with an empty index
+        n_results = min(k, self.collection.count())
+        if n_results <= 0:
+            return []
+
         # Embed query with the SAME model used for documents
         query_embedding = self.model.encode(query).tolist()
 
-        search_kwargs = {"query_embeddings": [query_embedding], "n_results": min(k, self.collection.count())}
+        search_kwargs = {"query_embeddings": [query_embedding], "n_results": n_results}
 
         if filters:
             search_kwargs["where"] = filters

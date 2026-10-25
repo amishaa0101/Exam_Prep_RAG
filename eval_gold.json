@@ -1,0 +1,1588 @@
+{
+ "_about": "Hand-labelled retrieval judgments. grade 2 = directly answers the question, 1 = partially useful, 0 = judged not relevant. Built by pooling the top 10 of basic and rerank retrieval per question, plus a keyword sweep of the whole index for relevant chunks both methods missed. Chunks not listed are unjudged. fingerprint = md5 of the chunk text, so a re-index that changes chunks is detected.",
+ "index_chunks": 496,
+ "judgments": {
+  "dbms_bcnf": {
+   "Database management system (complete).pdf_chunk_94": {
+    "grade": 2,
+    "fingerprint": "fa3c8c6881"
+   },
+   "Database management system (complete).pdf_chunk_107": {
+    "grade": 2,
+    "fingerprint": "9f99f945d4"
+   },
+   "Database management system (complete).pdf_chunk_112": {
+    "grade": 0,
+    "fingerprint": "911ab68f6d"
+   },
+   "Database management system (complete).pdf_chunk_113": {
+    "grade": 0,
+    "fingerprint": "70eddef61b"
+   },
+   "Database management system (complete).pdf_chunk_109": {
+    "grade": 1,
+    "fingerprint": "80b10ed337"
+   },
+   "Database management system (complete).pdf_chunk_97": {
+    "grade": 2,
+    "fingerprint": "94f74d154c"
+   },
+   "Database management system (complete).pdf_chunk_98": {
+    "grade": 2,
+    "fingerprint": "f0c798b857"
+   },
+   "Database management system (complete).pdf_chunk_110": {
+    "grade": 1,
+    "fingerprint": "daa7bc8854"
+   },
+   "Database management system (complete).pdf_chunk_91": {
+    "grade": 1,
+    "fingerprint": "dd5d0eb948"
+   },
+   "Database management system (complete).pdf_chunk_104": {
+    "grade": 0,
+    "fingerprint": "e7055ab7c8"
+   },
+   "Database management system (complete).pdf_chunk_96": {
+    "grade": 2,
+    "fingerprint": "d4b4653220"
+   },
+   "Database management system (complete).pdf_chunk_95": {
+    "grade": 2,
+    "fingerprint": "e6d38637b9"
+   },
+   "Database management system (complete).pdf_chunk_90": {
+    "grade": 1,
+    "fingerprint": "b8c8c52a5c"
+   },
+   "Database management system (complete).pdf_chunk_92": {
+    "grade": 2,
+    "fingerprint": "9aab16b8de"
+   },
+   "Database management system (complete).pdf_chunk_93": {
+    "grade": 1,
+    "fingerprint": "0089a268e7"
+   },
+   "Database management system (complete).pdf_chunk_102": {
+    "grade": 2,
+    "fingerprint": "7bcb065c3e"
+   },
+   "Database management system (complete).pdf_chunk_76": {
+    "grade": 1,
+    "fingerprint": "f76ab32f1a"
+   },
+   "Database management system (complete).pdf_chunk_80": {
+    "grade": 1,
+    "fingerprint": "3517a98c1c"
+   },
+   "Database management system (complete).pdf_chunk_108": {
+    "grade": 2,
+    "fingerprint": "081532f646"
+   }
+  },
+  "dbms_closure": {
+   "Database management system (complete).pdf_chunk_20": {
+    "grade": 2,
+    "fingerprint": "8fac17a167"
+   },
+   "Database management system (complete).pdf_chunk_32": {
+    "grade": 1,
+    "fingerprint": "48f7398b98"
+   },
+   "Database management system (complete).pdf_chunk_264": {
+    "grade": 0,
+    "fingerprint": "e58556834b"
+   },
+   "Database management system (complete).pdf_chunk_64": {
+    "grade": 0,
+    "fingerprint": "f6739ba594"
+   },
+   "Database management system (complete).pdf_chunk_70": {
+    "grade": 0,
+    "fingerprint": "dfad6b1f6b"
+   },
+   "Database management system (complete).pdf_chunk_72": {
+    "grade": 0,
+    "fingerprint": "f293172196"
+   },
+   "Database management system (complete).pdf_chunk_76": {
+    "grade": 0,
+    "fingerprint": "f76ab32f1a"
+   },
+   "Database management system (complete).pdf_chunk_78": {
+    "grade": 0,
+    "fingerprint": "293cc86c90"
+   },
+   "Database management system (complete).pdf_chunk_99": {
+    "grade": 0,
+    "fingerprint": "b05d1a1449"
+   },
+   "Database management system (complete).pdf_chunk_80": {
+    "grade": 0,
+    "fingerprint": "3517a98c1c"
+   },
+   "Database management system (complete).pdf_chunk_100": {
+    "grade": 0,
+    "fingerprint": "964bdd1ca8"
+   },
+   "Database management system (complete).pdf_chunk_71": {
+    "grade": 0,
+    "fingerprint": "1613e66216"
+   },
+   "Database management system (complete).pdf_chunk_21": {
+    "grade": 2,
+    "fingerprint": "863a3fb228"
+   },
+   "Database management system (complete).pdf_chunk_9": {
+    "grade": 2,
+    "fingerprint": "dcfdcb4f50"
+   },
+   "Database management system (complete).pdf_chunk_10": {
+    "grade": 2,
+    "fingerprint": "9dbe036dfa"
+   },
+   "Database management system (complete).pdf_chunk_11": {
+    "grade": 1,
+    "fingerprint": "5c7632e691"
+   },
+   "Database management system (complete).pdf_chunk_13": {
+    "grade": 2,
+    "fingerprint": "5abfcc5c5b"
+   },
+   "Database management system (complete).pdf_chunk_23": {
+    "grade": 1,
+    "fingerprint": "1a9882a3ed"
+   },
+   "Database management system (complete).pdf_chunk_24": {
+    "grade": 1,
+    "fingerprint": "a2bbfa0e17"
+   },
+   "Database management system (complete).pdf_chunk_31": {
+    "grade": 1,
+    "fingerprint": "a079f3b993"
+   },
+   "Database management system (complete).pdf_chunk_33": {
+    "grade": 1,
+    "fingerprint": "f22d2fb779"
+   },
+   "Database management system (complete).pdf_chunk_88": {
+    "grade": 1,
+    "fingerprint": "0028434996"
+   }
+  },
+  "dbms_lossless": {
+   "Database management system (complete).pdf_chunk_58": {
+    "grade": 2,
+    "fingerprint": "5d4ebe1caa"
+   },
+   "Database management system (complete).pdf_chunk_49": {
+    "grade": 2,
+    "fingerprint": "83a1e87cca"
+   },
+   "Database management system (complete).pdf_chunk_315": {
+    "grade": 0,
+    "fingerprint": "5884c7f147"
+   },
+   "Database management system (complete).pdf_chunk_317": {
+    "grade": 0,
+    "fingerprint": "65da730f41"
+   },
+   "Database management system (complete).pdf_chunk_52": {
+    "grade": 2,
+    "fingerprint": "21eb461faa"
+   },
+   "Database management system (complete).pdf_chunk_46": {
+    "grade": 2,
+    "fingerprint": "41bf4f0545"
+   },
+   "Database management system (complete).pdf_chunk_316": {
+    "grade": 0,
+    "fingerprint": "6b54066619"
+   },
+   "Database management system (complete).pdf_chunk_51": {
+    "grade": 2,
+    "fingerprint": "29a7007700"
+   },
+   "Database management system (complete).pdf_chunk_45": {
+    "grade": 1,
+    "fingerprint": "36c91bf2eb"
+   },
+   "Database management system (complete).pdf_chunk_312": {
+    "grade": 0,
+    "fingerprint": "c468d0ab01"
+   },
+   "Database management system (complete).pdf_chunk_60": {
+    "grade": 1,
+    "fingerprint": "b7ca95b9df"
+   },
+   "Database management system (complete).pdf_chunk_104": {
+    "grade": 0,
+    "fingerprint": "e7055ab7c8"
+   },
+   "Database management system (complete).pdf_chunk_57": {
+    "grade": 2,
+    "fingerprint": "acdb13b9e8"
+   },
+   "Database management system (complete).pdf_chunk_310": {
+    "grade": 1,
+    "fingerprint": "76813ad8a6"
+   },
+   "Database management system (complete).pdf_chunk_53": {
+    "grade": 2,
+    "fingerprint": "4242c7158f"
+   },
+   "Database management system (complete).pdf_chunk_54": {
+    "grade": 2,
+    "fingerprint": "983e265ce0"
+   },
+   "Database management system (complete).pdf_chunk_56": {
+    "grade": 1,
+    "fingerprint": "2d4d2793cb"
+   },
+   "Database management system (complete).pdf_chunk_59": {
+    "grade": 2,
+    "fingerprint": "29e0853ba7"
+   },
+   "Database management system (complete).pdf_chunk_97": {
+    "grade": 1,
+    "fingerprint": "94f74d154c"
+   },
+   "Database management system (complete).pdf_chunk_101": {
+    "grade": 1,
+    "fingerprint": "befbc237fa"
+   },
+   "Database management system (complete).pdf_chunk_110": {
+    "grade": 1,
+    "fingerprint": "daa7bc8854"
+   }
+  },
+  "dbms_candidate_key": {
+   "Database management system (complete).pdf_chunk_15": {
+    "grade": 2,
+    "fingerprint": "c9784e0d10"
+   },
+   "Database management system (complete).pdf_chunk_65": {
+    "grade": 0,
+    "fingerprint": "a4e12416ae"
+   },
+   "Database management system (complete).pdf_chunk_16": {
+    "grade": 2,
+    "fingerprint": "989104f9f8"
+   },
+   "Database management system (complete).pdf_chunk_17": {
+    "grade": 1,
+    "fingerprint": "a031cd53b3"
+   },
+   "Database management system (complete).pdf_chunk_14": {
+    "grade": 2,
+    "fingerprint": "0513541925"
+   },
+   "Database management system (complete).pdf_chunk_72": {
+    "grade": 0,
+    "fingerprint": "f293172196"
+   },
+   "Database management system (complete).pdf_chunk_64": {
+    "grade": 0,
+    "fingerprint": "f6739ba594"
+   },
+   "Database management system (complete).pdf_chunk_93": {
+    "grade": 0,
+    "fingerprint": "0089a268e7"
+   },
+   "Database management system (complete).pdf_chunk_81": {
+    "grade": 0,
+    "fingerprint": "bc29f92fe9"
+   },
+   "Database management system (complete).pdf_chunk_19": {
+    "grade": 0,
+    "fingerprint": "b4cd77e334"
+   },
+   "Database management system (complete).pdf_chunk_266": {
+    "grade": 0,
+    "fingerprint": "3fd77ce2a2"
+   },
+   "Database management system (complete).pdf_chunk_22": {
+    "grade": 0,
+    "fingerprint": "9076d6ea86"
+   },
+   "Database management system (complete).pdf_chunk_18": {
+    "grade": 0,
+    "fingerprint": "b3c7951218"
+   },
+   "Database management system (complete).pdf_chunk_68": {
+    "grade": 0,
+    "fingerprint": "0742b2f666"
+   }
+  },
+  "dbms_foreign_key": {
+   "Database management system (complete).pdf_chunk_230": {
+    "grade": 2,
+    "fingerprint": "ff9d81cbbe"
+   },
+   "Database management system (complete).pdf_chunk_244": {
+    "grade": 2,
+    "fingerprint": "72debf4147"
+   },
+   "Database management system (complete).pdf_chunk_243": {
+    "grade": 2,
+    "fingerprint": "9a4b788bc9"
+   },
+   "Database management system (complete).pdf_chunk_250": {
+    "grade": 2,
+    "fingerprint": "3d762b8825"
+   },
+   "Database management system (complete).pdf_chunk_229": {
+    "grade": 1,
+    "fingerprint": "ed3538a58c"
+   },
+   "Database management system (complete).pdf_chunk_238": {
+    "grade": 1,
+    "fingerprint": "4f4514717d"
+   },
+   "Database management system (complete).pdf_chunk_241": {
+    "grade": 1,
+    "fingerprint": "d6a1798052"
+   },
+   "Database management system (complete).pdf_chunk_233": {
+    "grade": 2,
+    "fingerprint": "cae5c5d23f"
+   },
+   "Database management system (complete).pdf_chunk_239": {
+    "grade": 1,
+    "fingerprint": "055d696e22"
+   },
+   "Database management system (complete).pdf_chunk_232": {
+    "grade": 1,
+    "fingerprint": "8f15a4d8bf"
+   },
+   "Database management system (complete).pdf_chunk_234": {
+    "grade": 0,
+    "fingerprint": "4882cff6f1"
+   },
+   "Database management system (complete).pdf_chunk_242": {
+    "grade": 1,
+    "fingerprint": "9b0b37b561"
+   },
+   "Database management system (complete).pdf_chunk_231": {
+    "grade": 2,
+    "fingerprint": "dcca5b22c0"
+   },
+   "Database management system (complete).pdf_chunk_236": {
+    "grade": 1,
+    "fingerprint": "470d3148c6"
+   },
+   "Database management system (complete).pdf_chunk_237": {
+    "grade": 1,
+    "fingerprint": "ae498b6745"
+   },
+   "Database management system (complete).pdf_chunk_240": {
+    "grade": 2,
+    "fingerprint": "799c7a9389"
+   },
+   "Database management system (complete).pdf_chunk_245": {
+    "grade": 1,
+    "fingerprint": "02790dbbc6"
+   },
+   "Database management system (complete).pdf_chunk_247": {
+    "grade": 2,
+    "fingerprint": "e1e0a9d5d9"
+   },
+   "Database management system (complete).pdf_chunk_248": {
+    "grade": 2,
+    "fingerprint": "e2356c8d92"
+   },
+   "Database management system (complete).pdf_chunk_249": {
+    "grade": 2,
+    "fingerprint": "019c4e25b6"
+   },
+   "Database management system (complete).pdf_chunk_251": {
+    "grade": 2,
+    "fingerprint": "1800630ad6"
+   },
+   "Database management system (complete).pdf_chunk_252": {
+    "grade": 2,
+    "fingerprint": "cad08350be"
+   },
+   "Database management system (complete).pdf_chunk_278": {
+    "grade": 1,
+    "fingerprint": "85cb60405e"
+   },
+   "Database management system (complete).pdf_chunk_376": {
+    "grade": 1,
+    "fingerprint": "5dc90b94c3"
+   }
+  },
+  "dbms_weak_entity": {
+   "Database management system (complete).pdf_chunk_227": {
+    "grade": 1,
+    "fingerprint": "2bbb113638"
+   },
+   "Database management system (complete).pdf_chunk_226": {
+    "grade": 2,
+    "fingerprint": "465bdde86d"
+   },
+   "Database management system (complete).pdf_chunk_224": {
+    "grade": 2,
+    "fingerprint": "5663d13323"
+   },
+   "Database management system (complete).pdf_chunk_211": {
+    "grade": 0,
+    "fingerprint": "ae86c17a3d"
+   },
+   "Database management system (complete).pdf_chunk_212": {
+    "grade": 0,
+    "fingerprint": "9e3b323927"
+   },
+   "Database management system (complete).pdf_chunk_225": {
+    "grade": 2,
+    "fingerprint": "6f6ddb581e"
+   },
+   "Database management system (complete).pdf_chunk_223": {
+    "grade": 2,
+    "fingerprint": "7d941f573e"
+   },
+   "Database management system (complete).pdf_chunk_273": {
+    "grade": 0,
+    "fingerprint": "3cb42b7ce3"
+   },
+   "Database management system (complete).pdf_chunk_263": {
+    "grade": 0,
+    "fingerprint": "b6374983d4"
+   },
+   "Database management system (complete).pdf_chunk_264": {
+    "grade": 0,
+    "fingerprint": "e58556834b"
+   },
+   "Database management system (complete).pdf_chunk_277": {
+    "grade": 1,
+    "fingerprint": "5a1677f657"
+   },
+   "Database management system (complete).pdf_chunk_213": {
+    "grade": 0,
+    "fingerprint": "e5bffd1574"
+   }
+  },
+  "dbms_exists": {
+   "Database management system (complete).pdf_chunk_372": {
+    "grade": 2,
+    "fingerprint": "f7aad85249"
+   },
+   "Database management system (complete).pdf_chunk_369": {
+    "grade": 1,
+    "fingerprint": "434e1ca371"
+   },
+   "Database management system (complete).pdf_chunk_351": {
+    "grade": 0,
+    "fingerprint": "f96b902753"
+   },
+   "Database management system (complete).pdf_chunk_350": {
+    "grade": 0,
+    "fingerprint": "496b2ebff9"
+   },
+   "Database management system (complete).pdf_chunk_376": {
+    "grade": 0,
+    "fingerprint": "5dc90b94c3"
+   },
+   "Database management system (complete).pdf_chunk_370": {
+    "grade": 2,
+    "fingerprint": "e308a046b6"
+   },
+   "Database management system (complete).pdf_chunk_368": {
+    "grade": 0,
+    "fingerprint": "21711f3ff3"
+   },
+   "Database management system (complete).pdf_chunk_375": {
+    "grade": 2,
+    "fingerprint": "112753b00b"
+   },
+   "Database management system (complete).pdf_chunk_371": {
+    "grade": 2,
+    "fingerprint": "8facf5298d"
+   },
+   "Database management system (complete).pdf_chunk_338": {
+    "grade": 0,
+    "fingerprint": "f20af8b5ec"
+   },
+   "Database management system (complete).pdf_chunk_381": {
+    "grade": 0,
+    "fingerprint": "bd22de06ce"
+   },
+   "Database management system (complete).pdf_chunk_353": {
+    "grade": 0,
+    "fingerprint": "54208b38ff"
+   },
+   "Database management system (complete).pdf_chunk_357": {
+    "grade": 1,
+    "fingerprint": "486ace9501"
+   },
+   "Database management system (complete).pdf_chunk_373": {
+    "grade": 2,
+    "fingerprint": "6431240431"
+   },
+   "Database management system (complete).pdf_chunk_374": {
+    "grade": 2,
+    "fingerprint": "a8f4e63b3d"
+   }
+  },
+  "dbms_trc": {
+   "Database management system (complete).pdf_chunk_382": {
+    "grade": 2,
+    "fingerprint": "beb8dd50d0"
+   },
+   "Database management system (complete).pdf_chunk_383": {
+    "grade": 2,
+    "fingerprint": "48c9cdcbfa"
+   },
+   "Database management system (complete).pdf_chunk_280": {
+    "grade": 0,
+    "fingerprint": "b67e68d560"
+   },
+   "Database management system (complete).pdf_chunk_281": {
+    "grade": 0,
+    "fingerprint": "2c911ea4fb"
+   },
+   "Database management system (complete).pdf_chunk_339": {
+    "grade": 0,
+    "fingerprint": "8669dd0773"
+   },
+   "Database management system (complete).pdf_chunk_304": {
+    "grade": 0,
+    "fingerprint": "9e40df9107"
+   },
+   "Database management system (complete).pdf_chunk_300": {
+    "grade": 0,
+    "fingerprint": "90be85dd9f"
+   },
+   "Database management system (complete).pdf_chunk_303": {
+    "grade": 0,
+    "fingerprint": "ccd99846e6"
+   },
+   "Database management system (complete).pdf_chunk_310": {
+    "grade": 0,
+    "fingerprint": "76813ad8a6"
+   },
+   "Database management system (complete).pdf_chunk_298": {
+    "grade": 0,
+    "fingerprint": "3f67b2f6c5"
+   },
+   "Database management system (complete).pdf_chunk_1": {
+    "grade": 0,
+    "fingerprint": "3a0e521a35"
+   },
+   "Database management system (complete).pdf_chunk_0": {
+    "grade": 0,
+    "fingerprint": "72d60b2ec0"
+   },
+   "Database management system (complete).pdf_chunk_279": {
+    "grade": 1,
+    "fingerprint": "84f763ab1a"
+   },
+   "Database management system (complete).pdf_chunk_301": {
+    "grade": 0,
+    "fingerprint": "35abc4b229"
+   },
+   "Database management system (complete).pdf_chunk_315": {
+    "grade": 0,
+    "fingerprint": "5884c7f147"
+   },
+   "Database management system (complete).pdf_chunk_384": {
+    "grade": 1,
+    "fingerprint": "883c64cf3c"
+   },
+   "Database management system (complete).pdf_chunk_385": {
+    "grade": 1,
+    "fingerprint": "a640663274"
+   },
+   "Database management system (complete).pdf_chunk_386": {
+    "grade": 1,
+    "fingerprint": "faa746a247"
+   },
+   "Database management system (complete).pdf_chunk_387": {
+    "grade": 1,
+    "fingerprint": "b0cb479bd4"
+   },
+   "Database management system (complete).pdf_chunk_388": {
+    "grade": 1,
+    "fingerprint": "2b9aec1750"
+   },
+   "Database management system (complete).pdf_chunk_389": {
+    "grade": 1,
+    "fingerprint": "7b5604a237"
+   },
+   "Database management system (complete).pdf_chunk_390": {
+    "grade": 1,
+    "fingerprint": "59eb3a1fdd"
+   },
+   "Database management system (complete).pdf_chunk_391": {
+    "grade": 1,
+    "fingerprint": "b9bd4c5448"
+   }
+  },
+  "dbms_acid": {
+   "Database management system (complete).pdf_chunk_112": {
+    "grade": 2,
+    "fingerprint": "911ab68f6d"
+   },
+   "Database management system (complete).pdf_chunk_118": {
+    "grade": 0,
+    "fingerprint": "9f7cd2de6a"
+   },
+   "Database management system (complete).pdf_chunk_117": {
+    "grade": 1,
+    "fingerprint": "89d302c705"
+   },
+   "Database management system (complete).pdf_chunk_113": {
+    "grade": 2,
+    "fingerprint": "70eddef61b"
+   },
+   "Database management system (complete).pdf_chunk_211": {
+    "grade": 0,
+    "fingerprint": "ae86c17a3d"
+   },
+   "Database management system (complete).pdf_chunk_176": {
+    "grade": 1,
+    "fingerprint": "bcbaa9d946"
+   },
+   "Database management system (complete).pdf_chunk_192": {
+    "grade": 0,
+    "fingerprint": "a1a7db90ab"
+   },
+   "Database management system (complete).pdf_chunk_278": {
+    "grade": 0,
+    "fingerprint": "85cb60405e"
+   },
+   "Database management system (complete).pdf_chunk_189": {
+    "grade": 0,
+    "fingerprint": "f68ddf9c35"
+   },
+   "Database management system (complete).pdf_chunk_116": {
+    "grade": 2,
+    "fingerprint": "c5b366efce"
+   },
+   "Database management system (complete).pdf_chunk_114": {
+    "grade": 2,
+    "fingerprint": "c7927f6abb"
+   },
+   "Database management system (complete).pdf_chunk_183": {
+    "grade": 0,
+    "fingerprint": "3b732bf54f"
+   },
+   "Database management system (complete).pdf_chunk_115": {
+    "grade": 2,
+    "fingerprint": "7355793a93"
+   }
+  },
+  "dbms_conflict_serializability": {
+   "Database management system (complete).pdf_chunk_133": {
+    "grade": 2,
+    "fingerprint": "a1b4fa5379"
+   },
+   "Database management system (complete).pdf_chunk_146": {
+    "grade": 1,
+    "fingerprint": "86692a307d"
+   },
+   "Database management system (complete).pdf_chunk_135": {
+    "grade": 2,
+    "fingerprint": "3e53e34041"
+   },
+   "Database management system (complete).pdf_chunk_145": {
+    "grade": 0,
+    "fingerprint": "294f69287d"
+   },
+   "Database management system (complete).pdf_chunk_167": {
+    "grade": 1,
+    "fingerprint": "180a787a1d"
+   },
+   "Database management system (complete).pdf_chunk_129": {
+    "grade": 2,
+    "fingerprint": "a6e331d724"
+   },
+   "Database management system (complete).pdf_chunk_126": {
+    "grade": 1,
+    "fingerprint": "ed4bb3dc2b"
+   },
+   "Database management system (complete).pdf_chunk_174": {
+    "grade": 0,
+    "fingerprint": "1527bde97f"
+   },
+   "Database management system (complete).pdf_chunk_142": {
+    "grade": 0,
+    "fingerprint": "b4acf5a22e"
+   },
+   "Database management system (complete).pdf_chunk_141": {
+    "grade": 0,
+    "fingerprint": "c66e4aae64"
+   },
+   "Database management system (complete).pdf_chunk_127": {
+    "grade": 2,
+    "fingerprint": "7f844632d0"
+   },
+   "Database management system (complete).pdf_chunk_137": {
+    "grade": 1,
+    "fingerprint": "f1ae86bc4f"
+   },
+   "Database management system (complete).pdf_chunk_148": {
+    "grade": 1,
+    "fingerprint": "16f2083d3a"
+   },
+   "Database management system (complete).pdf_chunk_138": {
+    "grade": 1,
+    "fingerprint": "96931d03ca"
+   },
+   "Database management system (complete).pdf_chunk_130": {
+    "grade": 2,
+    "fingerprint": "2642b0d06a"
+   },
+   "Database management system (complete).pdf_chunk_134": {
+    "grade": 2,
+    "fingerprint": "aa6ddb6839"
+   },
+   "Database management system (complete).pdf_chunk_173": {
+    "grade": 1,
+    "fingerprint": "7cec35a53e"
+   }
+  },
+  "dbms_recoverable": {
+   "Database management system (complete).pdf_chunk_166": {
+    "grade": 2,
+    "fingerprint": "cd6ba535f9"
+   },
+   "Database management system (complete).pdf_chunk_165": {
+    "grade": 1,
+    "fingerprint": "978e3da13f"
+   },
+   "Database management system (complete).pdf_chunk_164": {
+    "grade": 1,
+    "fingerprint": "c8a553ea16"
+   },
+   "Database management system (complete).pdf_chunk_156": {
+    "grade": 1,
+    "fingerprint": "1847981e1d"
+   },
+   "Database management system (complete).pdf_chunk_163": {
+    "grade": 2,
+    "fingerprint": "6564eecd78"
+   },
+   "Database management system (complete).pdf_chunk_160": {
+    "grade": 2,
+    "fingerprint": "10f2353347"
+   },
+   "Database management system (complete).pdf_chunk_157": {
+    "grade": 2,
+    "fingerprint": "eb47a84c00"
+   },
+   "Database management system (complete).pdf_chunk_146": {
+    "grade": 0,
+    "fingerprint": "86692a307d"
+   },
+   "Database management system (complete).pdf_chunk_135": {
+    "grade": 0,
+    "fingerprint": "3e53e34041"
+   },
+   "Database management system (complete).pdf_chunk_159": {
+    "grade": 1,
+    "fingerprint": "f8335cf661"
+   },
+   "Database management system (complete).pdf_chunk_162": {
+    "grade": 1,
+    "fingerprint": "b13feb9a91"
+   },
+   "Database management system (complete).pdf_chunk_201": {
+    "grade": 0,
+    "fingerprint": "218cf804ef"
+   },
+   "Database management system (complete).pdf_chunk_202": {
+    "grade": 0,
+    "fingerprint": "ceb8ae72ba"
+   },
+   "Database management system (complete).pdf_chunk_158": {
+    "grade": 2,
+    "fingerprint": "1c10f3edee"
+   },
+   "Database management system (complete).pdf_chunk_161": {
+    "grade": 2,
+    "fingerprint": "a81693238b"
+   },
+   "Database management system (complete).pdf_chunk_189": {
+    "grade": 1,
+    "fingerprint": "f68ddf9c35"
+   }
+  },
+  "dbms_2pl": {
+   "Database management system (complete).pdf_chunk_182": {
+    "grade": 2,
+    "fingerprint": "dcee866b6d"
+   },
+   "Database management system (complete).pdf_chunk_185": {
+    "grade": 2,
+    "fingerprint": "892cddd26e"
+   },
+   "Database management system (complete).pdf_chunk_181": {
+    "grade": 1,
+    "fingerprint": "cf49215122"
+   },
+   "Database management system (complete).pdf_chunk_189": {
+    "grade": 1,
+    "fingerprint": "f68ddf9c35"
+   },
+   "Database management system (complete).pdf_chunk_183": {
+    "grade": 2,
+    "fingerprint": "3b732bf54f"
+   },
+   "Database management system (complete).pdf_chunk_186": {
+    "grade": 2,
+    "fingerprint": "e4e8d1fbce"
+   },
+   "Database management system (complete).pdf_chunk_180": {
+    "grade": 0,
+    "fingerprint": "18a5fe3698"
+   },
+   "Database management system (complete).pdf_chunk_179": {
+    "grade": 0,
+    "fingerprint": "fea17bf441"
+   },
+   "Database management system (complete).pdf_chunk_190": {
+    "grade": 1,
+    "fingerprint": "8cff264103"
+   },
+   "Database management system (complete).pdf_chunk_178": {
+    "grade": 0,
+    "fingerprint": "52dd0beaf1"
+   },
+   "Database management system (complete).pdf_chunk_177": {
+    "grade": 0,
+    "fingerprint": "59f52f740b"
+   },
+   "Database management system (complete).pdf_chunk_187": {
+    "grade": 2,
+    "fingerprint": "72a88998f2"
+   }
+  },
+  "dbms_timestamp": {
+   "Database management system (complete).pdf_chunk_200": {
+    "grade": 2,
+    "fingerprint": "969d1311ef"
+   },
+   "Database management system (complete).pdf_chunk_197": {
+    "grade": 2,
+    "fingerprint": "c161049ca8"
+   },
+   "Database management system (complete).pdf_chunk_192": {
+    "grade": 2,
+    "fingerprint": "a1a7db90ab"
+   },
+   "Database management system (complete).pdf_chunk_208": {
+    "grade": 0,
+    "fingerprint": "b3c3b427c8"
+   },
+   "Database management system (complete).pdf_chunk_199": {
+    "grade": 2,
+    "fingerprint": "7d6edad858"
+   },
+   "Database management system (complete).pdf_chunk_206": {
+    "grade": 0,
+    "fingerprint": "ea5515f99b"
+   },
+   "Database management system (complete).pdf_chunk_195": {
+    "grade": 2,
+    "fingerprint": "a3baad2414"
+   },
+   "Database management system (complete).pdf_chunk_209": {
+    "grade": 0,
+    "fingerprint": "1032c24174"
+   },
+   "Database management system (complete).pdf_chunk_179": {
+    "grade": 0,
+    "fingerprint": "fea17bf441"
+   },
+   "Database management system (complete).pdf_chunk_175": {
+    "grade": 0,
+    "fingerprint": "d4c394b018"
+   },
+   "Database management system (complete).pdf_chunk_191": {
+    "grade": 2,
+    "fingerprint": "4f24151e44"
+   },
+   "Database management system (complete).pdf_chunk_198": {
+    "grade": 2,
+    "fingerprint": "3c1cc49fc0"
+   },
+   "Database management system (complete).pdf_chunk_210": {
+    "grade": 0,
+    "fingerprint": "09e53d8c5c"
+   },
+   "Database management system (complete).pdf_chunk_207": {
+    "grade": 0,
+    "fingerprint": "ab722fb5fc"
+   },
+   "Database management system (complete).pdf_chunk_193": {
+    "grade": 2,
+    "fingerprint": "44572c1019"
+   },
+   "Database management system (complete).pdf_chunk_194": {
+    "grade": 2,
+    "fingerprint": "85b4ab8140"
+   },
+   "Database management system (complete).pdf_chunk_196": {
+    "grade": 2,
+    "fingerprint": "a8730a7891"
+   },
+   "Database management system (complete).pdf_chunk_201": {
+    "grade": 2,
+    "fingerprint": "218cf804ef"
+   }
+  },
+  "dbms_bplus_tree": {
+   "Database management system (complete).pdf_chunk_462": {
+    "grade": 1,
+    "fingerprint": "23dcd232f8"
+   },
+   "Database management system (complete).pdf_chunk_461": {
+    "grade": 2,
+    "fingerprint": "f5505a2aaf"
+   },
+   "Database management system (complete).pdf_chunk_463": {
+    "grade": 2,
+    "fingerprint": "41fae8dfd9"
+   },
+   "Database management system (complete).pdf_chunk_447": {
+    "grade": 2,
+    "fingerprint": "3929dc1933"
+   },
+   "Database management system (complete).pdf_chunk_448": {
+    "grade": 2,
+    "fingerprint": "32becbc82e"
+   },
+   "Database management system (complete).pdf_chunk_450": {
+    "grade": 1,
+    "fingerprint": "25501b6bc2"
+   },
+   "Database management system (complete).pdf_chunk_451": {
+    "grade": 0,
+    "fingerprint": "67c4eedc5e"
+   },
+   "Database management system (complete).pdf_chunk_459": {
+    "grade": 2,
+    "fingerprint": "cd535b46d8"
+   },
+   "Database management system (complete).pdf_chunk_460": {
+    "grade": 2,
+    "fingerprint": "62445ac517"
+   },
+   "Database management system (complete).pdf_chunk_449": {
+    "grade": 1,
+    "fingerprint": "899b2f0e5e"
+   },
+   "Database management system (complete).pdf_chunk_452": {
+    "grade": 0,
+    "fingerprint": "59f577082e"
+   },
+   "Database management system (complete).pdf_chunk_453": {
+    "grade": 0,
+    "fingerprint": "51805b38e6"
+   },
+   "Database management system (complete).pdf_chunk_455": {
+    "grade": 1,
+    "fingerprint": "2be83c0f30"
+   }
+  },
+  "dbms_dense_sparse": {
+   "Database management system (complete).pdf_chunk_408": {
+    "grade": 2,
+    "fingerprint": "c7245f8c12"
+   },
+   "Database management system (complete).pdf_chunk_419": {
+    "grade": 1,
+    "fingerprint": "b77b7db255"
+   },
+   "Database management system (complete).pdf_chunk_417": {
+    "grade": 1,
+    "fingerprint": "0580c0016d"
+   },
+   "Database management system (complete).pdf_chunk_421": {
+    "grade": 1,
+    "fingerprint": "ca44bef868"
+   },
+   "Database management system (complete).pdf_chunk_415": {
+    "grade": 1,
+    "fingerprint": "ca8bbe3338"
+   },
+   "Database management system (complete).pdf_chunk_414": {
+    "grade": 1,
+    "fingerprint": "0982eab10d"
+   },
+   "Database management system (complete).pdf_chunk_403": {
+    "grade": 0,
+    "fingerprint": "a5b80d32b5"
+   },
+   "Database management system (complete).pdf_chunk_418": {
+    "grade": 0,
+    "fingerprint": "fa199e6536"
+   },
+   "Database management system (complete).pdf_chunk_416": {
+    "grade": 1,
+    "fingerprint": "8fd58d54c9"
+   },
+   "Database management system (complete).pdf_chunk_423": {
+    "grade": 1,
+    "fingerprint": "a4d6fbf52e"
+   },
+   "Database management system (complete).pdf_chunk_409": {
+    "grade": 2,
+    "fingerprint": "07730e4681"
+   },
+   "Database management system (complete).pdf_chunk_412": {
+    "grade": 2,
+    "fingerprint": "6d3c97504f"
+   },
+   "Database management system (complete).pdf_chunk_424": {
+    "grade": 0,
+    "fingerprint": "11a7077428"
+   }
+  },
+  "dbms_blocking_factor": {
+   "Database management system (complete).pdf_chunk_405": {
+    "grade": 2,
+    "fingerprint": "a93855170e"
+   },
+   "Database management system (complete).pdf_chunk_404": {
+    "grade": 1,
+    "fingerprint": "08093b1232"
+   },
+   "Database management system (complete).pdf_chunk_406": {
+    "grade": 1,
+    "fingerprint": "1b112edce2"
+   },
+   "Database management system (complete).pdf_chunk_394": {
+    "grade": 2,
+    "fingerprint": "d2b8bedb92"
+   },
+   "Database management system (complete).pdf_chunk_415": {
+    "grade": 1,
+    "fingerprint": "ca8bbe3338"
+   },
+   "Database management system (complete).pdf_chunk_398": {
+    "grade": 2,
+    "fingerprint": "f08d0a8cbe"
+   },
+   "Database management system (complete).pdf_chunk_423": {
+    "grade": 0,
+    "fingerprint": "a4d6fbf52e"
+   },
+   "Database management system (complete).pdf_chunk_411": {
+    "grade": 1,
+    "fingerprint": "a8e619be61"
+   },
+   "Database management system (complete).pdf_chunk_412": {
+    "grade": 0,
+    "fingerprint": "6d3c97504f"
+   },
+   "Database management system (complete).pdf_chunk_396": {
+    "grade": 1,
+    "fingerprint": "ee6b2d6876"
+   },
+   "Database management system (complete).pdf_chunk_403": {
+    "grade": 1,
+    "fingerprint": "a5b80d32b5"
+   },
+   "Database management system (complete).pdf_chunk_416": {
+    "grade": 0,
+    "fingerprint": "8fd58d54c9"
+   },
+   "Database management system (complete).pdf_chunk_410": {
+    "grade": 1,
+    "fingerprint": "0283bf9c6a"
+   }
+  },
+  "dbms_2nf": {
+   "Database management system (complete).pdf_chunk_86": {
+    "grade": 2,
+    "fingerprint": "ae6357d011"
+   },
+   "Database management system (complete).pdf_chunk_82": {
+    "grade": 2,
+    "fingerprint": "1bfa4929cf"
+   },
+   "Database management system (complete).pdf_chunk_98": {
+    "grade": 2,
+    "fingerprint": "f0c798b857"
+   },
+   "Database management system (complete).pdf_chunk_90": {
+    "grade": 1,
+    "fingerprint": "b8c8c52a5c"
+   },
+   "Database management system (complete).pdf_chunk_84": {
+    "grade": 2,
+    "fingerprint": "f951347878"
+   },
+   "Database management system (complete).pdf_chunk_83": {
+    "grade": 2,
+    "fingerprint": "87810b65f4"
+   },
+   "Database management system (complete).pdf_chunk_85": {
+    "grade": 2,
+    "fingerprint": "30661741b6"
+   },
+   "Database management system (complete).pdf_chunk_63": {
+    "grade": 0,
+    "fingerprint": "fa8aff598b"
+   },
+   "Database management system (complete).pdf_chunk_88": {
+    "grade": 2,
+    "fingerprint": "0028434996"
+   },
+   "Database management system (complete).pdf_chunk_107": {
+    "grade": 0,
+    "fingerprint": "9f99f945d4"
+   },
+   "Database management system (complete).pdf_chunk_91": {
+    "grade": 1,
+    "fingerprint": "dd5d0eb948"
+   },
+   "Database management system (complete).pdf_chunk_73": {
+    "grade": 0,
+    "fingerprint": "129dd6552c"
+   },
+   "Database management system (complete).pdf_chunk_101": {
+    "grade": 0,
+    "fingerprint": "befbc237fa"
+   },
+   "Database management system (complete).pdf_chunk_77": {
+    "grade": 1,
+    "fingerprint": "e47d6d48d5"
+   },
+   "Database management system (complete).pdf_chunk_80": {
+    "grade": 1,
+    "fingerprint": "3517a98c1c"
+   },
+   "Database management system (complete).pdf_chunk_95": {
+    "grade": 1,
+    "fingerprint": "e6d38637b9"
+   },
+   "Database management system (complete).pdf_chunk_96": {
+    "grade": 2,
+    "fingerprint": "d4b4653220"
+   },
+   "Database management system (complete).pdf_chunk_99": {
+    "grade": 1,
+    "fingerprint": "b05d1a1449"
+   },
+   "Database management system (complete).pdf_chunk_100": {
+    "grade": 2,
+    "fingerprint": "964bdd1ca8"
+   },
+   "Database management system (complete).pdf_chunk_104": {
+    "grade": 1,
+    "fingerprint": "e7055ab7c8"
+   }
+  },
+  "dbms_minimal_cover": {
+   "Database management system (complete).pdf_chunk_36": {
+    "grade": 1,
+    "fingerprint": "e04bc66a3b"
+   },
+   "Database management system (complete).pdf_chunk_44": {
+    "grade": 2,
+    "fingerprint": "c8d18e1ea5"
+   },
+   "Database management system (complete).pdf_chunk_45": {
+    "grade": 1,
+    "fingerprint": "36c91bf2eb"
+   },
+   "Database management system (complete).pdf_chunk_43": {
+    "grade": 2,
+    "fingerprint": "490a4b024a"
+   },
+   "Database management system (complete).pdf_chunk_40": {
+    "grade": 1,
+    "fingerprint": "cf041fb910"
+   },
+   "Database management system (complete).pdf_chunk_82": {
+    "grade": 0,
+    "fingerprint": "1bfa4929cf"
+   },
+   "Database management system (complete).pdf_chunk_61": {
+    "grade": 0,
+    "fingerprint": "4a0a635af8"
+   },
+   "Database management system (complete).pdf_chunk_86": {
+    "grade": 0,
+    "fingerprint": "ae6357d011"
+   },
+   "Database management system (complete).pdf_chunk_97": {
+    "grade": 0,
+    "fingerprint": "94f74d154c"
+   },
+   "Database management system (complete).pdf_chunk_84": {
+    "grade": 0,
+    "fingerprint": "f951347878"
+   },
+   "Database management system (complete).pdf_chunk_3": {
+    "grade": 0,
+    "fingerprint": "15caa30572"
+   },
+   "Database management system (complete).pdf_chunk_85": {
+    "grade": 0,
+    "fingerprint": "30661741b6"
+   },
+   "Database management system (complete).pdf_chunk_37": {
+    "grade": 1,
+    "fingerprint": "9a06f65dc5"
+   },
+   "Database management system (complete).pdf_chunk_39": {
+    "grade": 1,
+    "fingerprint": "5c255fe1d8"
+   },
+   "Database management system (complete).pdf_chunk_41": {
+    "grade": 2,
+    "fingerprint": "f4b692bb2e"
+   }
+  },
+  "dbms_participation": {
+   "Database management system (complete).pdf_chunk_261": {
+    "grade": 1,
+    "fingerprint": "f39ecaeaed"
+   },
+   "Database management system (complete).pdf_chunk_258": {
+    "grade": 1,
+    "fingerprint": "3061989057"
+   },
+   "Database management system (complete).pdf_chunk_260": {
+    "grade": 1,
+    "fingerprint": "2da5b1f797"
+   },
+   "Database management system (complete).pdf_chunk_268": {
+    "grade": 1,
+    "fingerprint": "45fd37d554"
+   },
+   "Database management system (complete).pdf_chunk_257": {
+    "grade": 1,
+    "fingerprint": "b15b991066"
+   },
+   "Database management system (complete).pdf_chunk_259": {
+    "grade": 1,
+    "fingerprint": "002dbe5b4a"
+   },
+   "Database management system (complete).pdf_chunk_262": {
+    "grade": 1,
+    "fingerprint": "6c9bc456c6"
+   },
+   "Database management system (complete).pdf_chunk_221": {
+    "grade": 2,
+    "fingerprint": "4f8b67789d"
+   },
+   "Database management system (complete).pdf_chunk_266": {
+    "grade": 1,
+    "fingerprint": "3fd77ce2a2"
+   },
+   "Database management system (complete).pdf_chunk_267": {
+    "grade": 1,
+    "fingerprint": "b5bc2c6804"
+   },
+   "Database management system (complete).pdf_chunk_220": {
+    "grade": 2,
+    "fingerprint": "40600944ec"
+   },
+   "Database management system (complete).pdf_chunk_225": {
+    "grade": 1,
+    "fingerprint": "6f6ddb581e"
+   },
+   "Database management system (complete).pdf_chunk_226": {
+    "grade": 1,
+    "fingerprint": "465bdde86d"
+   }
+  },
+  "dbms_joins": {
+   "Database management system (complete).pdf_chunk_312": {
+    "grade": 2,
+    "fingerprint": "c468d0ab01"
+   },
+   "Database management system (complete).pdf_chunk_316": {
+    "grade": 2,
+    "fingerprint": "6b54066619"
+   },
+   "Database management system (complete).pdf_chunk_317": {
+    "grade": 1,
+    "fingerprint": "65da730f41"
+   },
+   "Database management system (complete).pdf_chunk_314": {
+    "grade": 2,
+    "fingerprint": "b27881ba9e"
+   },
+   "Database management system (complete).pdf_chunk_315": {
+    "grade": 1,
+    "fingerprint": "5884c7f147"
+   },
+   "Database management system (complete).pdf_chunk_313": {
+    "grade": 2,
+    "fingerprint": "be8c600130"
+   },
+   "Database management system (complete).pdf_chunk_302": {
+    "grade": 2,
+    "fingerprint": "ee8aea4cf3"
+   },
+   "Database management system (complete).pdf_chunk_299": {
+    "grade": 0,
+    "fingerprint": "b0e1b5a9c4"
+   },
+   "Database management system (complete).pdf_chunk_266": {
+    "grade": 0,
+    "fingerprint": "3fd77ce2a2"
+   },
+   "Database management system (complete).pdf_chunk_376": {
+    "grade": 0,
+    "fingerprint": "5dc90b94c3"
+   },
+   "Database management system (complete).pdf_chunk_301": {
+    "grade": 1,
+    "fingerprint": "35abc4b229"
+   },
+   "Database management system (complete).pdf_chunk_308": {
+    "grade": 2,
+    "fingerprint": "75bafd573a"
+   }
+  },
+  "dbms_group_by_having": {
+   "Database management system (complete).pdf_chunk_351": {
+    "grade": 2,
+    "fingerprint": "f96b902753"
+   },
+   "Database management system (complete).pdf_chunk_338": {
+    "grade": 0,
+    "fingerprint": "f20af8b5ec"
+   },
+   "Database management system (complete).pdf_chunk_353": {
+    "grade": 1,
+    "fingerprint": "54208b38ff"
+   },
+   "Database management system (complete).pdf_chunk_339": {
+    "grade": 0,
+    "fingerprint": "8669dd0773"
+   },
+   "Database management system (complete).pdf_chunk_368": {
+    "grade": 1,
+    "fingerprint": "21711f3ff3"
+   },
+   "Database management system (complete).pdf_chunk_350": {
+    "grade": 0,
+    "fingerprint": "496b2ebff9"
+   },
+   "Database management system (complete).pdf_chunk_261": {
+    "grade": 0,
+    "fingerprint": "f39ecaeaed"
+   },
+   "Database management system (complete).pdf_chunk_337": {
+    "grade": 0,
+    "fingerprint": "527b973e1a"
+   },
+   "Database management system (complete).pdf_chunk_352": {
+    "grade": 2,
+    "fingerprint": "70c7139866"
+   },
+   "Database management system (complete).pdf_chunk_349": {
+    "grade": 1,
+    "fingerprint": "10757b4fd9"
+   },
+   "Database management system (complete).pdf_chunk_280": {
+    "grade": 0,
+    "fingerprint": "b67e68d560"
+   },
+   "Database management system (complete).pdf_chunk_367": {
+    "grade": 1,
+    "fingerprint": "b477c67186"
+   }
+  },
+  "dbms_view_serializability": {
+   "Database management system (complete).pdf_chunk_147": {
+    "grade": 2,
+    "fingerprint": "3e2e295aa3"
+   },
+   "Database management system (complete).pdf_chunk_146": {
+    "grade": 2,
+    "fingerprint": "86692a307d"
+   },
+   "Database management system (complete).pdf_chunk_126": {
+    "grade": 1,
+    "fingerprint": "ed4bb3dc2b"
+   },
+   "Database management system (complete).pdf_chunk_148": {
+    "grade": 2,
+    "fingerprint": "16f2083d3a"
+   },
+   "Database management system (complete).pdf_chunk_141": {
+    "grade": 2,
+    "fingerprint": "c66e4aae64"
+   },
+   "Database management system (complete).pdf_chunk_145": {
+    "grade": 2,
+    "fingerprint": "294f69287d"
+   },
+   "Database management system (complete).pdf_chunk_142": {
+    "grade": 2,
+    "fingerprint": "b4acf5a22e"
+   },
+   "Database management system (complete).pdf_chunk_191": {
+    "grade": 0,
+    "fingerprint": "4f24151e44"
+   },
+   "Database management system (complete).pdf_chunk_144": {
+    "grade": 1,
+    "fingerprint": "b6fe6cbb4b"
+   },
+   "Database management system (complete).pdf_chunk_149": {
+    "grade": 2,
+    "fingerprint": "a4afb847fc"
+   },
+   "Database management system (complete).pdf_chunk_127": {
+    "grade": 0,
+    "fingerprint": "7f844632d0"
+   },
+   "Database management system (complete).pdf_chunk_137": {
+    "grade": 0,
+    "fingerprint": "f1ae86bc4f"
+   }
+  },
+  "dbms_strict_2pl": {
+   "Database management system (complete).pdf_chunk_190": {
+    "grade": 2,
+    "fingerprint": "8cff264103"
+   },
+   "Database management system (complete).pdf_chunk_189": {
+    "grade": 2,
+    "fingerprint": "f68ddf9c35"
+   },
+   "Database management system (complete).pdf_chunk_185": {
+    "grade": 1,
+    "fingerprint": "892cddd26e"
+   },
+   "Database management system (complete).pdf_chunk_182": {
+    "grade": 1,
+    "fingerprint": "dcee866b6d"
+   },
+   "Database management system (complete).pdf_chunk_181": {
+    "grade": 0,
+    "fingerprint": "cf49215122"
+   },
+   "Database management system (complete).pdf_chunk_187": {
+    "grade": 1,
+    "fingerprint": "72a88998f2"
+   },
+   "Database management system (complete).pdf_chunk_179": {
+    "grade": 0,
+    "fingerprint": "fea17bf441"
+   },
+   "Database management system (complete).pdf_chunk_186": {
+    "grade": 2,
+    "fingerprint": "e4e8d1fbce"
+   },
+   "Database management system (complete).pdf_chunk_188": {
+    "grade": 0,
+    "fingerprint": "29eb82abc5"
+   },
+   "Database management system (complete).pdf_chunk_183": {
+    "grade": 1,
+    "fingerprint": "3b732bf54f"
+   },
+   "Database management system (complete).pdf_chunk_191": {
+    "grade": 0,
+    "fingerprint": "4f24151e44"
+   },
+   "Database management system (complete).pdf_chunk_204": {
+    "grade": 0,
+    "fingerprint": "0065eec806"
+   }
+  },
+  "dbms_deadlock_prevention": {
+   "Database management system (complete).pdf_chunk_204": {
+    "grade": 1,
+    "fingerprint": "0065eec806"
+   },
+   "Database management system (complete).pdf_chunk_205": {
+    "grade": 1,
+    "fingerprint": "f70d380994"
+   },
+   "Database management system (complete).pdf_chunk_203": {
+    "grade": 0,
+    "fingerprint": "ed2a07b3e1"
+   },
+   "Database management system (complete).pdf_chunk_209": {
+    "grade": 2,
+    "fingerprint": "1032c24174"
+   },
+   "Database management system (complete).pdf_chunk_210": {
+    "grade": 2,
+    "fingerprint": "09e53d8c5c"
+   },
+   "Database management system (complete).pdf_chunk_202": {
+    "grade": 0,
+    "fingerprint": "ceb8ae72ba"
+   },
+   "Database management system (complete).pdf_chunk_180": {
+    "grade": 0,
+    "fingerprint": "18a5fe3698"
+   },
+   "Database management system (complete).pdf_chunk_208": {
+    "grade": 2,
+    "fingerprint": "b3c3b427c8"
+   },
+   "Database management system (complete).pdf_chunk_187": {
+    "grade": 0,
+    "fingerprint": "72a88998f2"
+   },
+   "Database management system (complete).pdf_chunk_189": {
+    "grade": 0,
+    "fingerprint": "f68ddf9c35"
+   },
+   "Database management system (complete).pdf_chunk_206": {
+    "grade": 2,
+    "fingerprint": "ea5515f99b"
+   },
+   "Database management system (complete).pdf_chunk_207": {
+    "grade": 2,
+    "fingerprint": "ab722fb5fc"
+   }
+  },
+  "algo_merge_vs_quick": {
+   "algorithms_notes.md_chunk_12": {
+    "grade": 2,
+    "fingerprint": "6fb35eef5b"
+   },
+   "algorithms_notes.md_chunk_8": {
+    "grade": 1,
+    "fingerprint": "098e0547f4"
+   },
+   "algorithms_notes.md_chunk_11": {
+    "grade": 2,
+    "fingerprint": "35a2cbba7f"
+   },
+   "algorithms_notes.md_chunk_3": {
+    "grade": 2,
+    "fingerprint": "c26a71bc4e"
+   },
+   "algorithms_notes.md_chunk_7": {
+    "grade": 2,
+    "fingerprint": "09d72157fe"
+   },
+   "algorithms_notes.md_chunk_1": {
+    "grade": 0,
+    "fingerprint": "1a1c357784"
+   },
+   "algorithms_notes.md_chunk_2": {
+    "grade": 2,
+    "fingerprint": "55b672e0d4"
+   },
+   "algorithms_notes.md_chunk_4": {
+    "grade": 0,
+    "fingerprint": "ceb4bcb643"
+   },
+   "algorithms_notes.md_chunk_5": {
+    "grade": 0,
+    "fingerprint": "96bb71fc62"
+   },
+   "algorithms_notes.md_chunk_6": {
+    "grade": 1,
+    "fingerprint": "174a65062a"
+   }
+  }
+ }
+}
